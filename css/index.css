@@ -1,0 +1,661 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.html {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font: 10px;
+}
+
+.row {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    justify-self: center;
+    background: #fff;
+}
+
+.body-content .row {
+    margin-top: 200px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* slider */
+
+.body-content .slider {
+    width: 800px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.body-content .slides {
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+
+.body-content .slides input {
+    display: none;
+}
+
+.body-content .slide {
+    width: 20%;
+    transition: 2s;
+}
+
+.slide {
+    width: 100%;
+}
+
+.body-content .slide img {
+    width: 800px;
+    height: 500px;
+    object-fit: cover;
+}
+
+
+/*css for manual slide navigation*/
+
+.body-content .navigation-manual {
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.body-content .manual-btn {
+    border: 2px solid #40D3DC;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.body-content .manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.body-content .manual-btn:hover {
+    background: #40D3DC;
+}
+
+#radio1:checked~.first {
+    margin-left: 0;
+}
+
+#radio2:checked~.first {
+    margin-left: -20%;
+}
+
+#radio3:checked~.first {
+    margin-left: -40%;
+}
+
+#radio4:checked~.first {
+    margin-left: -60%;
+}
+
+
+/*css for automatic navigation*/
+
+.body-content .navigation-auto {
+    position: absolute;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: 460px;
+}
+
+.body-content .navigation-auto div {
+    border: 2px solid #40D3DC;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.body-content .navigation-auto div:not(:last-child) {
+    margin-right: 40px;
+}
+
+#radio1:checked~.navigation-auto .auto-btn1 {
+    background: #40D3DC;
+}
+
+#radio2:checked~.navigation-auto .auto-btn2 {
+    background: #40D3DC;
+}
+
+#radio3:checked~.navigation-auto .auto-btn3 {
+    background: #40D3DC;
+}
+
+#radio4:checked~.navigation-auto .auto-btn4 {
+    background: #40D3DC;
+}
+
+
+/*css for automatic navigation*/
+
+.navigation-auto {
+    position: absolute;
+    display: flex;
+    width: 1200px;
+    justify-content: center;
+    margin-top: 460px;
+}
+
+.navigation-auto div {
+    border: 2px solid #40D3DC;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 40px;
+}
+
+#radio1:checked~.navigation-auto .auto-btn1 {
+    background: #40D3DC;
+}
+
+#radio2:checked~.navigation-auto .auto-btn2 {
+    background: #40D3DC;
+}
+
+#radio3:checked~.navigation-auto .auto-btn3 {
+    background: #40D3DC;
+}
+
+#radio4:checked~.navigation-auto .auto-btn4 {
+    background: #40D3DC;
+}
+
+
+/* slider */
+
+
+/* Member */
+
+.member {
+    position: relative;
+    margin-left: 30px;
+    width: 95%;
+}
+
+.member-title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.member-items {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.member-card {
+    position: relative;
+    align-items: center;
+    margin-left: 35px;
+}
+
+.member-card img {
+    width: 100%;
+    border-radius: 10px;
+    z-index: 1;
+    box-shadow: 0 0 5px #999;
+}
+
+.card-title {
+    position: absolute;
+    top: 70%;
+    left: 10px;
+    color: rgb(255, 0, 0);
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+}
+
+.member-card:hover .card-title {
+    visibility: visible;
+}
+
+
+/* Member */
+
+
+/* Blog */
+
+.desease-header {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.desease-items {
+    padding: 10px 30px 10px;
+    background: #d2e7fd;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.desease-items .row {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.dentist-card {
+    width: auto;
+    height: 200px;
+    background: #62a6ef;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.dentist-card .thumbnail {
+    display: flex;
+    align-self: center;
+}
+
+.dentist-card .thumbnail img {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.card-items .card-title .card-content {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.dentist-card .btn {
+    width: 120px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    float: inline-end;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* Blog */
+
+
+/* header */
+
+/*duc*/
+.menu-header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.menu-bar {
+    min-height: 90px;
+    background: #3670d5;
+    text-align: center;
+    z-index: 5;
+}
+
+.menu-bar ul {
+    display: inline-flex;
+    list-style: none;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-bar ul .search {
+    width: 300px;
+    height: 50px;
+    align-items: center;
+}
+
+.menu-bar ul li {
+    width: 120px;
+    margin: 15px;
+    padding: 15px;
+    position: relative;
+}
+
+.menu-bar ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu-bar ul li .fa {
+    margin-right: 5px;
+}
+
+.active,
+.menu-bar ul li:hover {
+    background: #62a6ef;
+    border-radius: 3px;
+}
+
+.sub-menu-service {
+    display: none;
+}
+
+.menu-bar ul li:hover .sub-menu-1 {
+    display: block;
+    position: absolute;
+    background: #4e8fd6;
+    margin-top: 15px;
+    margin-left: -15px;
+    border-radius: 5px;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul {
+    display: block;
+    margin: 10px;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li {
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child {
+    border-bottom: none;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover {
+    color: #d2e7fd;
+}
+
+.sub-menu-1 {
+    display: none;
+}
+
+.body-3 {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+
+/* header */
+
+
+/* footer */
+
+footer {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    background: linear-gradient(to bottom, #3670d5 0%, #210097 100%);
+    color: #fff;
+    padding: 40px 0 20px;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+footer .row {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+footer .col {
+    flex-basis: 25%;
+    padding: 5px;
+}
+
+.logo {
+    width: 200px;
+    margin-bottom: 30px;
+}
+
+footer .col h3 {
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+footer a {
+    color: #fff;
+}
+
+footer ul li {
+    list-style: none;
+    margin-bottom: 12px;
+}
+
+footer .row .col-2 h3 {
+    text-align: center;
+}
+
+footer .row .col-2 li {
+    list-style: none;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+footer .row .col-2 a:hover {
+    color: #000;
+}
+
+footer .row .col-4 {
+    text-align: center;
+}
+
+.opening-hours li {
+    text-align: center;
+}
+
+footer .information {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+}
+
+.information .far {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #000;
+    background: #fff;
+    margin-right: 15px;
+    cursor: pointer;
+    margin-bottom: 35px;
+}
+
+.social-icons .fab {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #000;
+    background: #fff;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.color-red {
+    color: red;
+}
+
+.float-right {
+    text-align: center;
+}
+
+hr {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    margin: 20px;
+}
+
+.copyright {
+    text-align: center;
+}
+
+
+/* footer */
+.text {
+    width: 60%;
+    height: 140px;
+color: #8bc43f;
+position: relative;
+padding-top: 40px;
+padding-left: 50px;
+}
+
+.benefit{
+    min-width: 100%;
+    background-color: skyblue;
+  
+}
+.benefit1{
+   /* border: 1px solid red;*/
+    padding:25px;
+ display: flex;
+}
+
+.menu{
+    border: 1px black solid;
+    min-width: 150px;
+    min-height: 200px;
+    justify-content: center;
+    background-color: white;
+    border-radius: 25px;
+    padding: 1%;
+    margin: 1%;
+  
+}
+
+.fa-solid{
+   /* border: 1px solid black;*/
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: skyblue;
+    display: inline-block;
+    padding: 1px;
+
+   
+}  
+#fa-solid{
+  /*  display: inline-flex;*/
+  width: 20%;
+  display: table-cell;
+    border-radius: 50%;
+    font-size: 28px;
+    vertical-align: middle;
+    text-align: center;
+
+}
+
+.tittle{
+width: 80%;
+text-align: center;
+float: left;
+margin-right: 10px;
+}
+.menu .menu1{
+    font-size: 28px;
+}
+
+p{
+    font-size: 18px;
+}
+
+#row{
+    display: flex;
+}
+h3{
+    font-size: auto;
+    margin-bottom: 15px;
+}
+.listup{
+    list-style-type: none;
+   display: inline-block;
+   padding-top: 15px;
+
+}
+.listup li{
+    float: left;
+     padding-right: 5px;
+}
+li a{
+text-decoration: none;
+}
+.service_1{
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.implants{
+    width: 100%; 
+    background-color: lightgray;
+    margin-bottom: 25px;
+    padding-left: 5px;
+}
+#implant1{
+    margin-left: 15px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 32px;
+    background-color: blue;
+    color: white;
+}
+#implant2 table{
+    border: 1px solid;
+    text-align: center;
+}
+#implant2 tr,#implant2 th,#implant2 td{
+    border: 1px solid;
+    padding: 5px;
+    font-size: 18px;
+}
+#implant2 th{
+    background-color:#f2f3f5 ;
+}
+#implant3{
+    width: 32%;
+    float: left;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 0.5%;
+ 
+}
+
+/*duc*/
