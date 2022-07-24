@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Service</title>
 
-    <link rel="stylesheet" href="css1/index.css">
+    <link rel="stylesheet" href="../css/service.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
@@ -33,7 +33,7 @@
                 <nav class="menu-bar">
                     <ul>
                         <img src="../images/resources/logo-2.png">
-                        <li><a href="#"><i class="fa fa-home"></i>Home</a></li>
+                        <li><a href="../index.html"><i class="fa fa-home"></i>Home</a></li>
                         <li><a href="about_us.html">About Us</a></li>
                         <li><a href="#"><i class="fa fa-user-doctor"></i>Doctor</a></li>
                         <li class="active"><a><i class="fa fa-user-check"></i>Service</a>
@@ -42,7 +42,7 @@
                                     <li><a href="checkup.html">Check Ups</a></li>
                                     <li><a href="dental_bridge.html">Dental Bridges</a></li>
                                     <li><a href="dental_implant.html">Dental Implants</a></li>
-                                    <li><a href="#">Fillings</a></li>
+                                    <li><a href="filling.html">Fillings</a></li>
                                     <li><a href="#">Treating Gum Disease</a></li>
                                     <li><a href="#">Tooth Extraction & Removal</a></li>
                                     <li><a href="#">Cosmetic Dentistry</a></li>
@@ -70,7 +70,8 @@
         </header>
     </div>
     <!-- end header -->
-    <div class="container">
+
+    <div class="container service-content">
         <ol class="listup">
             <li><a href="index.html">Home</a></li>
             <li>></li>
@@ -80,29 +81,66 @@
         </ol>
     </div>
         <!-- body -->
-        <div class="container">
-    <div class="row">
+        <div class="container" style="margin-bottom: 20px;">
+        <div class="row">
         <div class="col-sm-9">
             <h1>Dental Check Ups</h1>
             <p>Great oral health starts here, with a free dental exam for patients without insurance (some limitations apply*). Based on this initial exam, your dentist will create your customized dental treatment plan, which will be a guide for you and your dental team going forward in order to give you a healthy mouth. </p>
             <p>While the services you’ll receive may vary, here’s what you can expect at your first dental checkup: </p>
             <ol style="list-style: none; list-style-type: circle;">
                 <li><p><b>A review of your medical history. </b>Tell your dentist about your diet or medications as these may impact your treatment and oral health</p></li>
-                <li><p><b>A conversation with your dentist </b>about any concerns you have regarding your teeth, mouth, or overall oral health—we encourage you to ask questions  </p></li>
+                <li><p><b>A conversation with your dentist </b>about any concerns you have regarding your teeth, mouth, or overall oral health — we encourage you to ask questions  </p></li>
                 <li><p>An oral exam, including a <b>visual gum tissue check and visual oral cancer scan </b></p></li>
                 <li><p><b>X-rays</b>, if necessary, to see your teeth below the gum line </p></li>
                 <li><p><b>A comprehensive treatment plan</b>, with recommended treatment and ongoing care from your dentist</p></li>
             </ol>
             <p>Your dentist will tailor your comprehensive treatment plan, including your hygiene appointments, based on your initial exam. Treatment could begin as soon as the day following your initial exam.</p>
-            
+
+            <img src="../images/service_html/checkup/1.jpg" alt="" style="width: 45%;">
+            <img src="../images/service_html/checkup/2.jpeg" alt="" style="width: 45%;">
         </div>
 
-    <div class="col-sm-3">
-            
+    <div class="col-sm-3" st>
+          <div class="service-frame">
+            <div class="form-group">
+            <label>Full name:</label>
+            <input required="true" type="text" name="fullname" class="form-control">
+        </div>
+      
+        <div class="form-group">
+            <label>Birth</label>
+            <input required="true" type="date" name="age" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Email:</label>   
+            <input required="true" type="text" name="email" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Address:</label>
+            <input required="true" type="text" name="address" class="form-control">
+        </div>
+          <div class="form-group">
+            <label>Address:</label>
+            <select class="form-control">   
+                <option>Select</option>
+                <option>Check Up</option>
+                <option>Dental Bridge</option>
+                <option>Dental Implant</option>
+                <option>Filling</option>
+                <option></option>
+            </select>
+        <div class="form-group">
+            <label>Content:</label>
+            <textarea class="form-control" id="content_service" rows="5"></textarea>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-success">Book</button>
+        </div>
+        </div>
         </div>
     </div>
     </div>
-
+    </div>  
 
     <!-- end body -->
 

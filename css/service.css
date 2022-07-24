@@ -32,277 +32,13 @@ body {
 }
 
 
-/* slider */
-
-.body-content .slider {
-    width: 800px;
-    height: 500px;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.body-content .slides {
-    width: 500%;
-    height: 500px;
-    display: flex;
-}
-
-.body-content .slides input {
-    display: none;
-}
-
-.body-content .slide {
-    width: 20%;
-    transition: 2s;
-}
-
-.slide {
-    width: 100%;
-}
-
-.body-content .slide img {
-    width: 800px;
-    height: 500px;
-    object-fit: cover;
-}
 
 
-/*css for manual slide navigation*/
-
-.body-content .navigation-manual {
-    position: relative;
-    width: 800px;
-    margin-top: -40px;
-    display: flex;
-    justify-content: center;
-}
-
-.body-content .manual-btn {
-    border: 2px solid #40D3DC;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 1s;
-}
-
-.body-content .manual-btn:not(:last-child) {
-    margin-right: 40px;
-}
-
-.body-content .manual-btn:hover {
-    background: #40D3DC;
-}
-
-#radio1:checked~.first {
-    margin-left: 0;
-}
-
-#radio2:checked~.first {
-    margin-left: -20%;
-}
-
-#radio3:checked~.first {
-    margin-left: -40%;
-}
-
-#radio4:checked~.first {
-    margin-left: -60%;
-}
-
-
-/*css for automatic navigation*/
-
-.body-content .navigation-auto {
-    position: absolute;
-    display: flex;
-    width: 800px;
-    justify-content: center;
-    margin-top: 460px;
-}
-
-.body-content .navigation-auto div {
-    border: 2px solid #40D3DC;
-    padding: 5px;
-    border-radius: 10px;
-    transition: 1s;
-}
-
-.body-content .navigation-auto div:not(:last-child) {
-    margin-right: 40px;
-}
-
-#radio1:checked~.navigation-auto .auto-btn1 {
-    background: #40D3DC;
-}
-
-#radio2:checked~.navigation-auto .auto-btn2 {
-    background: #40D3DC;
-}
-
-#radio3:checked~.navigation-auto .auto-btn3 {
-    background: #40D3DC;
-}
-
-#radio4:checked~.navigation-auto .auto-btn4 {
-    background: #40D3DC;
-}
-
-
-/*css for automatic navigation*/
-
-.navigation-auto {
-    position: absolute;
-    display: flex;
-    width: 1200px;
-    justify-content: center;
-    margin-top: 460px;
-}
-
-.navigation-auto div {
-    border: 2px solid #40D3DC;
-    padding: 5px;
-    border-radius: 10px;
-    transition: 1s;
-}
-
-.navigation-auto div:not(:last-child) {
-    margin-right: 40px;
-}
-
-#radio1:checked~.navigation-auto .auto-btn1 {
-    background: #40D3DC;
-}
-
-#radio2:checked~.navigation-auto .auto-btn2 {
-    background: #40D3DC;
-}
-
-#radio3:checked~.navigation-auto .auto-btn3 {
-    background: #40D3DC;
-}
-
-#radio4:checked~.navigation-auto .auto-btn4 {
-    background: #40D3DC;
-}
-
-
-/* slider */
-
-
-/* Member */
-
-.member {
-    position: relative;
-    margin-left: 30px;
-    width: 95%;
-}
-
-.member-title {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
-}
-
-.member-items {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 50px;
-}
-
-.member-card {
-    position: relative;
-    align-items: center;
-    margin-left: 35px;
-}
-
-.member-card img {
-    width: 100%;
-    border-radius: 10px;
-    z-index: 1;
-    box-shadow: 0 0 5px #999;
-}
-
-.card-title {
-    position: absolute;
-    top: 70%;
-    left: 10px;
-    color: rgb(255, 0, 0);
-    display: flex;
-    flex-direction: column;
-    visibility: hidden;
-}
-
-.member-card:hover .card-title {
-    visibility: visible;
-}
-
-
-/* Member */
-
-
-/* Blog */
-
-.desease-header {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.desease-items {
-    padding: 10px 30px 10px;
-    background: #d2e7fd;
-    border-radius: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-.desease-items .row {
-    margin-top: 10px;
-    margin-bottom: 5px;
-}
-
-.dentist-card {
-    width: auto;
-    height: 200px;
-    background: #62a6ef;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
-
-.dentist-card .thumbnail {
-    display: flex;
-    align-self: center;
-}
-
-.dentist-card .thumbnail img {
-    margin-top: 10px;
-    margin-left: 10px;
-}
-
-.card-items .card-title .card-content {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.dentist-card .btn {
-    width: 120px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    float: inline-end;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-
-/* Blog */
 
 
 /* header */
 
-/*duc*/
+
 .menu-header {
     width: 100%;
     position: absolute;
@@ -414,7 +150,7 @@ footer {
 }
 
 footer .row {
-    width: 90%;
+    width: 100%;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -523,13 +259,18 @@ hr {
 
 
 /* footer */
+
+/*duc*/
 .text {
-    width: 60%;
+    width: 10%;
     height: 140px;
-color: #8bc43f;
-position: relative;
-padding-top: 40px;
-padding-left: 50px;
+    color: #8bc43f;
+    position: relative;
+      padding-top: 40px;
+    padding-left: 0px;
+}
+#contact p{
+    font-size: 24px;
 }
 
 .benefit{
@@ -545,8 +286,8 @@ padding-left: 50px;
 
 .menu{
     border: 1px black solid;
-    min-width: 150px;
-    min-height: 200px;
+    width: 33%;
+    min-height: 25%;    
     justify-content: center;
     background-color: white;
     border-radius: 25px;
@@ -585,6 +326,10 @@ margin-right: 10px;
 }
 .menu .menu1{
     font-size: 28px;
+
+}
+.explain{
+    margin-top: 20px;
 }
 
 p{
@@ -662,4 +407,28 @@ h1{
     margin-top: 110px;
 }
 
+.service-frame{ 
+    border: 1px solid rgba(0, 0, 0, 0.2); 
+    padding: 15px;
+    width: 400px;
+    position: fixed;
+    bottom: initial;
+    display: block;
+    background-color: lightblue;
+    border-radius: 5px;
+    margin-bottom: 200px;
+}
+
+.form-group{
+    margin: 5px;
+
+}
+.label{
+    font-size: 20px;
+    tex
+}
+.form-control{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
 /*duc*/
