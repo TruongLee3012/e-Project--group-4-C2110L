@@ -15,6 +15,7 @@
     <script src="https://kit.fontawesome.com/d953ad999c.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,9 +32,9 @@
         <div class="row">
             <nav class="menu-bar">
                 <ul>
-                    <a href="index.html"><img src="images/resources/logo-2.png"></a>
-                    <li class="active"><a href="index.html"><i class="fa fa-home"></i>Home</a></li>
-                    <li><a href="#">About Us</a></li>
+                    <img src="../images/resources/logo-2.png">
+                    <li class="active"><a href="#"><i class="fa fa-home"></i>Home</a></li>
+                    <li><a href="view/about_us.html">About Us</a></li>
                     <li><a href="#"><i class="fa fa-user-doctor"></i>Doctor</a></li>
                     <li><a href="#"><i class="fa fa-user-check"></i>Service</a>
                         <div class="sub-menu-1">
@@ -42,18 +43,30 @@
                                 <li><a href="view/dental_bridge.html">Dental Bridges</a></li>
                                 <li><a href="view/dental_implant.html">Dental Implants</a></li>
                                 <li><a href="view/filling.html">Fillings</a></li>
+                         <!--        <li><a href="#">Treating Gum Disease</a></li>
+                                <li><a href="#">Tooth Extraction & Removal</a></li>
+                                <li><a href="#">Cosmetic Dentistry</a></li>
+                                <li><a href="#">Dental Crowns</a></li>
+                                <li><a href="#">Emergency Dental Care</a></li>
+                                <li><a href="#">Oral Surgery</a></li>
+                                <li><a href="#">Root Canal</a></li> -->
                             </ul>
                         </div>
                     </li>
                     <li><a href="#"><i class="fa fa-procedures"></i>Product</a>
                         <div class="sub-menu-1">
                             <ul>
-                              
+                                <li><a href="#">A</a></li>
+                                <li><a href="#">B</a></li>
+                                <li><a href="#">C</a></li>
                             </ul>
                         </div>
                     </li>
                     <li><a href="#"><i class="fa fa-blog"></i>Blog</a></li>
-                    <input type="text" class="search" placeholder="Search">
+                    <div>
+                        <span class="las la-search"></span>
+                        <input type="text" class="search" placeholder="Search">
+                    </div>
                 </ul>
             </nav>
         </div>
@@ -62,6 +75,7 @@
     <!-- end header -->
 
     <!-- body -->
+    <div  style="background-image: url(images/background.jpg); background-size: cover;">
     <div class="body-content container-fluid">
         <div class="row">
             <div class="slider">
@@ -106,60 +120,159 @@
             </div>
         </div>
     </div>
-    <div class="">
+    <!-- About us -->
+    <div class="container">
+        <div class="row" style="display:flex">
+            <div class="col-6">
+            <img src="images/index/aboutus.jpg" width="80%">
+            </div>
+       
+            <div class="col-6">
+                <div class="aboutus">
+                    <div class="section-heading">
+                        <h2>About us</h2>
+                        <div class="line"></div>
+                    </div>
+                    <p>Dento was established in 2022 with the mission of taking care and bringing a healthy smile to the community. We not only guarantee the best treatment results, but also care about each customer's experience.</p>
+                </div>
+                <div class="single_skill mt-30">
+                    <h6>Experience Dentist</h6>
+                    <div id="bar1" class="barfiller">
+                        <span class="tip" style="left: -528px; transition: left 1s ease-in-out 0s;">80%</span>
+                        <span class="fill" data-percentage="80" style="background:rgb(0, 174, 239); width: 432px; transition: left 1s ease-in-out 0s;"></span>
+                    </div>
+                </div>
+                <div class="single_skill mt-30">
+                    <h6>Modern Equipment</h6>
+                    <div id="bar1" class="barfiller">
+                        <span class="tip" style="left: -528px; transition: left 1s ease-in-out 0s;">65%</span>
+                        <span class="fill" data-percentage="65" style="background:rgb(0, 174, 239); width: 351px; transition: left 1s ease-in-out 0s;"></span>
+                    </div>
+                </div>
+                <div class="single_skill mt-30">
+                    <h6>Friendly Staff</h6>
+                    <div id="bar1" class="barfiller">
+                        <span class="tip" style="left: -528px; transition: left 1s ease-in-out 0s;">85%</span>
+                        <span class="fill" data-percentage="85" style="background:rgb(0, 174, 239); width: 459px; transition: left 1s ease-in-out 0s;"></span>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+
+
+    <!-- About us -->
+    <!-- Member -->
+    <div class="container">
         <div class="member">
             <div class="member-title">
-                <h2>Member</h2>
+                <h2>Our dentist</h2>
             </div>
             <div class="member-items">
-                <div class="col col-md-3 col-xs-12 ">
-                    <div class="member-card">
-                        <img src="images/team/1.jpg" alt="">
-                        <div class="card-title">
-                            <h4>Name: </h4>
-                            <span>Email:</span>
-                            <span>Phone:</span>
-                            <span>Address:</span>
+                    <figure class="snip0060 yellow"><img src="images/team/1.jpg" alt="sample8" />
+                      <figcaption>
+                        <div><i class="ion-videocamera">Dr. Duc</i></div>
+                        <div>
+                          <p>Dentist</p>
+                          <p>Director</p>
                         </div>
-                    </div>
-                </div>
-                <div class="col col-md-3 col-xs-12 ">
-                    <div class="member-card">
-                        <img src="images/team/1.jpg" alt="">
-                        <div class="card-title">
-                            <h4>Name: </h4>
-                            <span>Email:</span>
-                            <span>Phone:</span>
-                            <span>Address:</span>
+                        <a href="view/doctor"></a>
+                      </figcaption>
+                    </figure>
+                    <figure class="snip0060 yellow"><img src="images/team/1.jpg" alt="sample8" />
+                      <figcaption>
+                        <div><i class="ion-videocamera">Dr. Truong</i></div>
+                        <div>
+                          <p>Dentist</p>
+                          <p>Deputy Director</p>
                         </div>
-                    </div>
-                </div>
-                <div class="col col-md-3 col-xs-12 ">
-                    <div class="member-card">
-                        <img src="images/team/1.jpg" alt="">
-                        <div class="card-title">
-                            <h4>Name: </h4>
-                            <span>Email:</span>
-                            <span>Phone:</span>
-                            <span>Address:</span>
+                        <a href="#"></a>
+                      </figcaption>
+                    </figure>
+                    <figure class="snip0060 yellow"><img src="images/team/1.jpg" alt="sample8" />
+                      <figcaption>
+                        <div><i class="ion-videocamera">Dr. Dat</i></div>
+                        <div>
+                          <p>Orthodontist</p>
+                          <p>Manager</p>
                         </div>
-                    </div>
-                </div>
-                <div class="col col-md-3 col-xs-12 ">
-                    <div class="member-card">
-                        <img src="images/team/1.jpg" alt="">
-                        <div class="card-title">
-                            <h4>Name: </h4>
-                            <span>Email:</span>
-                            <span>Phone:</span>
-                            <span>Address:</span>
+                        <a href="#"></a>
+                      </figcaption>
+                    </figure>
+                    <figure class="snip0060 yellow"><img src="images/team/1.jpg" alt="sample8" />
+                      <figcaption>
+                        <div><i class="ion-videocamera">Dr. Dung</i></div>
+                        <div>
+                          <p>Hygienist</p>
+                          <p>Professtional</p>
                         </div>
-                    </div>
-                </div>
+                        <a href="#"></a>
+                      </figcaption>
+                    </figure>
             </div>
         </div>
     </div>
-    <div class="body-3">
+    <!-- Member -->
+
+    <!-- Highlight service -->
+
+        <div class="container">
+            <div class="member">
+                 <div class="member-title">
+                    <h2>Hightlight Service</h2>
+
+                 </div>
+                   <div class="member-title" style="color: black">
+                     <p>Dento Viet Name currently has a variety of dental services to meet the oral health care needs of all customers.</p>
+
+                 </div>
+                    
+                    <div class="member-items">
+                       <figure class="snip1084 red">
+                          <img src="images/index/checkup.jpg" height="220px" alt="sample43" />
+                          <figcaption>
+                            <h2>Check   <span>Up</span></h2>
+                            <p>A check-up allows your dentist to see if you have any dental problems and helps you keep your mouth healthy</p>  
+                          </figcaption>
+                          <a href="#"></a>
+                        </figure>
+                    
+                        <figure class="snip1084 blue">
+                            <img src="images/index/dental-bridge.jpg" height="220px" alt="sample51" />
+                          <figcaption>
+                            <h2>Dental   <span>Bridges</span></h2>
+                            <p>If you have missing teeth, a dental bridge can help restore the look and function of your teeth. It bridges the gap where the missing tooth is.</p>
+                          </figcaption>
+                          <a href="#"></a>
+                        </figure>
+                   
+                         <figure class="snip1084 orange">
+                            <img src="images/index/dental-implant.jpg" height="220px" alt="sample51" />
+                          <figcaption>
+                            <h2>Dental   <span>Implants</span></h2>
+                            <p>Dental implants are medical devices surgically implanted into the jaw to restore a person's ability to chew or their appearance.</p>
+                          </figcaption>
+                          <a href="#"></a>
+                        </figure>
+                   
+                         <figure class="snip1084 yellow">
+                            <img src="images/index/tooth-filling.jpg" height="220px" alt="sample51" />
+                          <figcaption>
+                            <h2>Filling   <span>Tooth</span></h2>
+                            <!-- <p>Filling <span>Tooth</span></p> -->
+                            <p>Used to treat a small hole, or cavity, in a tooth. To repair a cavity, removes the decayed tooth tissue and fills the space with a filling material.</p>
+                          </figcaption>
+                          <a href="#"></a>
+                        </figure>
+                        
+                    </div>    
+            </div>
+        </div>
+
+     <!-- Highlight service -->
+
+     <!-- Blog -->
+    <!-- <div class="body-3">
         <div class="desease">
             <div class="desease-header">
                 <div class="desease-header-title">
@@ -245,9 +358,11 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
-    </div>
+
+    <!-- Blog -->
+
     <!-- end body -->
     <!-- footer -->
     <footer class="container-fluid">
@@ -311,6 +426,13 @@
                 counter = 1;
             }
         }, 5000);
+    </script>
+    <script type="text/javascript">
+        $("figure").mouseleave(
+          function () {
+          $(this).removeClass("hover");
+          }
+          );
     </script>
 </body>
 

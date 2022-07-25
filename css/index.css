@@ -226,7 +226,7 @@ body {
     position: absolute;
     top: 70%;
     left: 10px;
-    color: rgb(255, 0, 0);
+    /*color: rgb(255, 0, 0);*/
     display: flex;
     flex-direction: column;
     visibility: hidden;
@@ -523,143 +523,123 @@ hr {
 
 
 /* footer */
-.text {
-    width: 60%;
-    height: 140px;
-color: #8bc43f;
-position: relative;
-padding-top: 40px;
-padding-left: 50px;
+.center {
+  margin: 0 auto; 
+  padding: 15px;
+  width: 720px;
+}
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700; 
+}
+p {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+.row {
+  margin-top: 48px;
+}
+.description {
+  margin-top: 24px;
+}
+.description p{
+  text-align: center;
+  font-weight: 400;
+  font-size: 16px;
 }
 
-.benefit{
-    min-width: 100%;
-    background-color: skyblue;
+/*With :after */
+figure.test { 
+  display: inline-block;
+  position: relative;
+  overflow: hidden; 
+  text-align: center;   
+  cursor: pointer;
+}
+figure.test img {
+  width: 100%;
+  height: 100%;
+}
+figure.test figcaption {
+  position: absolute;
+  top: 82%;
+  left: 22.5%;
+  right: 22.5%; 
+  width: 400px;
+  opacity: 0;
+  z-index: 1;
+  transition: all 0.8s ease-out;
+  transition-delay: 0.2s;
+}
+figure.test:after {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  top: 70%;
+  left: 10%;
+  right: 10%;
+  bottom: 7%;
+  background: #e6f0f2;
+  opacity: 0;
+  transition: all 0.8s ease-out;
+}
+figure.test:hover:after {
+  opacity: 0.9;
+}
+figure.test:hover figcaption {
+  transform: translateY(-50%);
+  opacity: 1;
+}
+
+#rotate {
+  perspective: 500px;
+}
+#rotate:after {
+  transform: rotateX(90deg);
+  transition: all 0.6s ease-in-out;
+}
+#rotate:hover:after {
+  transform: rotateX(0deg);
+}
+#rotate figcaption {  
+  transition: all 0.6s ease-in-out;
+  transform: translateY(-50%) rotateX(90deg);
+}
+#rotate:hover figcaption {
+  transform: translateY(-50%) rotateX(0);
+}
+
+/*Without :after*/
+.frame {
+  text-align: center; 
+  position: relative;
+  cursor: pointer;  
+  perspective: 500px; 
+}
+.frame img {
+  width: 100%;
+  height: 100%;
+}
+.frame .details {
+  width: 75%;
+  height: 80%;  
+  padding: 5% 10%;
+  position: absolute; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateY(90deg);
+  transform-origin: 50%;
+  background: rgba(255,255,255,0.9);  
+  opacity: 0;
+  transition: all 0.4s ease-in;
   
 }
-.benefit1{
-   /* border: 1px solid red;*/
-    padding:25px;
- display: flex;
+.frame:hover .details {
+  transform: translate(-50%, -50%) rotateY(0deg);
+  opacity: 1;
 }
 
-.menu{
-    border: 1px black solid;
-    min-width: 150px;
-    min-height: 200px;
-    justify-content: center;
-    background-color: white;
-    border-radius: 25px;
-    padding: 1%;
-    margin: 1%;
-  
+/*Effect without Perspective*/
+.frame#wth {
+  perspective: none;
 }
-
-.fa-solid{
-   /* border: 1px solid black;*/
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    background-color: skyblue;
-    display: inline-block;
-    padding: 1px;
-
-   
-}  
-#fa-solid{
-  /*  display: inline-flex;*/
-  width: 20%;
-  display: table-cell;
-    border-radius: 50%;
-    font-size: 28px;
-    vertical-align: middle;
-    text-align: center;
-
-}
-
-.tittle{
-width: 80%;
-text-align: center;
-float: left;
-margin-right: 10px;
-}
-.menu .menu1{
-    font-size: 28px;
-}
-
-p{
-    font-size: 18px;
-}
-
-#row{
-    display: flex;
-}
-h3{
-    font-size: auto;
-    margin-bottom: 15px;
-}
-.listup{
-    list-style-type: none;
-   display: inline-block;
-   padding-top: 15px;
-
-}
-.listup li{
-    float: left;
-     padding-right: 5px;
-}
-li a{
-text-decoration: none;
-}
-.service_1{
-   display: block;
-   margin-left: auto;
-   margin-right: auto;
-}
-
-h1{
-    text-align: center;
-    margin-bottom: 20px;
-}
-.implants{
-    width: 100%; 
-    background-color: lightgray;
-    margin-bottom: 25px;
-    padding-left: 5px;
-}
-#implant1{
-    margin-left: 15px;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 32px;
-    background-color: blue;
-    color: white;
-}
-#implant2 table{
-    border: 1px solid;
-    text-align: center;
-}
-#implant2 tr,#implant2 th,#implant2 td{
-    border: 1px solid;
-    padding: 5px;
-    font-size: 18px;
-}
-#implant2 th{
-    background-color:#f2f3f5 ;
-}
-#implant3{
-    width: 32%;
-    float: left;
-    border: 1px solid black;
-    border-radius: 10px;
-    margin: 0.5%;
- 
-}
-
-.service-content{
-    margin-top: 110px;
-}
-
-/*duc*/
