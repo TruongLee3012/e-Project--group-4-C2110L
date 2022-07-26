@@ -281,8 +281,8 @@ body {
     margin-left: 10px;
 }
 
-.card-items .card-title .card-content {
-    margin-top: 10px;
+.card-content {
+    margin-top: 25px;
     margin-bottom: 10px;
 }
 
@@ -294,6 +294,15 @@ body {
     float: inline-end;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+
+.dentist-card .btn a {
+    color: #fff;
+}
+
+.about-us {
+    margin-top: 20px;
+    margin-bottom: 70px;
 }
 
 
