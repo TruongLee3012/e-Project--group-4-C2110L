@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Account Page</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="icon" type="image/png" href="../images/favicon/favicon-32x32.png" sizes="32x32">
@@ -21,28 +21,24 @@
         </div>
         <div class="sidebar-menu">
             <ul>
-                <li>
-                    <a href="dashboard.html"><span class="las la-igloo"></span>
+                <li class="not-hover">
+                    <a href="dashboard.php" class="active"><span class="las la-igloo"></span>
                     <span>Dashboard</span></a>
                 </li>
                 <li>
-                    <a href="dashboard-add.html"><span class="las la-plus-circle"></span>
+                    <a href="dashboard-add.php"><span class="las la-plus-circle"></span>
                     <span>Add</span></a>
                 </li>
                 <li>
-                    <a href="dashboard-list.html"><span class="las la-clipboard-list"></span>
+                    <a href="dashboard-list.php"><span class="las la-clipboard-list"></span>
                     <span>List</span></a>
                 </li>
                 <li>
-                    <a href="dashboard-service-order.html"><span class="las la-shopping-bag"></span>
+                    <a href="dashboard-service-order.php"><span class="las la-shopping-bag"></span>
                     <span>Service order</span></a>
                 </li>
                 <li>
-                    <a href="dashboard-customer.html"><span class="las la-user-circle"></span>
-                    <span>Customers</span></a>
-                </li>
-                <li class="not-hover">
-                    <a href="dashboard-account.html" class="active"><span class="las la-users-cog"></span>
+                    <a href="dashboard-account.php"><span class="las la-users-cog"></span>
                     <span>Account</span></a>
                 </li>
             </ul>
@@ -51,11 +47,7 @@
 
     <div class="main-content">
         <header>
-            <h2>
-                <label for="nav-toggle">
-                        <span class="las la-bars"></span>
-                </label> Dashboard
-            </h2>
+            <h2><label for="nav-toggle"><span class="las la-bars"></span></label> Dashboard</h2>
             <div class="search-wrapper">
                 <span class="las la-search"></span>
                 <input type="search" placeholder="Search">
@@ -71,7 +63,42 @@
 
         <main>
             <div class="cards">
-
+                <div class="card-single">
+                    <div>
+                        <h1>23</h1>
+                        <span>Customers</span>
+                    </div>
+                    <div>
+                        <span class="las la-users"></span>
+                    </div>
+                </div>
+                <div class="card-single">
+                    <div>
+                        <h1>15</h1>
+                        <span>Blogs</span>
+                    </div>
+                    <div>
+                        <span class="las la-blog"></span>
+                    </div>
+                </div>
+                <div class="card-single">
+                    <div>
+                        <h1>23</h1>
+                        <span>Order</span>
+                    </div>
+                    <div>
+                        <span class="las la-shopping-bag"></span>
+                    </div>
+                </div>
+                <div class="card-single">
+                    <div>
+                        <h1>5400$</h1>
+                        <span>Income</span>
+                    </div>
+                    <div>
+                        <span class="las la-hand-holding-usd"></span>
+                    </div>
+                </div>
             </div>
         </main>
     </div>

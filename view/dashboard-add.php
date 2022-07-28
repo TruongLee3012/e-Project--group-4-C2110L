@@ -1,3 +1,17 @@
+<?php
+if(!empty($_POST)) {
+	require_once('../data/dbhelp.php');
+
+	$name = $_POST['name'];
+	$image = $_POST['image'];
+	$content = $_POST['content'];
+	$update_at = $create_at = date('Y-m-d H:i:s');
+
+	$sql = "insert into blog(name, image, content, create_at, update_at) values ('$name', '$image', '$content', '$create_at', '$update_at')";
+	execute($sql);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +19,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Customer Page</title>
+    <title>Add Page</title>
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="icon" type="image/png" href="../images/favicon/favicon-32x32.png" sizes="32x32">
@@ -22,27 +36,23 @@
         <div class="sidebar-menu">
             <ul>
                 <li>
-                    <a href="dashboard.html"><span class="las la-igloo"></span>
+                    <a href="dashboard.php"><span class="las la-igloo"></span>
                     <span>Dashboard</span></a>
                 </li>
-                <li>
-                    <a href="dashboard-add.html"><span class="las la-plus-circle"></span>
+                <li class="not-hover">
+                    <a href="dashboard-add.php" class="active"><span class="las la-plus-circle"></span>
                     <span>Add</span></a>
                 </li>
                 <li>
-                    <a href="dashboard-list.html"><span class="las la-clipboard-list"></span>
+                    <a href="dashboard-list.php"><span class="las la-clipboard-list"></span>
                     <span>List</span></a>
                 </li>
                 <li>
-                    <a href="dashboard-service-order.html"><span class="las la-shopping-bag"></span>
+                    <a href="dashboard-service-order.php"><span class="las la-shopping-bag"></span>
                     <span>Service order</span></a>
                 </li>
-                <li class="not-hover">
-                    <a href="dashboard-customer.html" class="active"><span class="las la-user-circle"></span>
-                    <span>Customers</span></a>
-                </li>
                 <li>
-                    <a href="dashboard-account.html"><span class="las la-users-cog"></span>
+                    <a href="dashboard-account.php"><span class="las la-users-cog"></span>
                     <span>Account</span></a>
                 </li>
             </ul>
@@ -71,7 +81,18 @@
 
         <main>
             <div class="cards">
-
+                <form method="post">
+                    <p>Title: </p>  
+                    <input type="text" name="name" placeholder="Enter title">
+                    <p>Thumbnail: </p>
+                    <input type="text" name="image" placeholder="Enter thumbnail">
+                    <p>Price: </p>
+                    <input type="number" name="price" placeholder="Enter price">
+                    <p>Content: </p>
+                    <textarea rows="5" style="width: 96%" name="content"></textarea>
+                    <p><a href="dashboard-list.php">Back to list</a></p>
+                    <button>Add</button>
+                </form>
             </div>
         </main>
     </div>
