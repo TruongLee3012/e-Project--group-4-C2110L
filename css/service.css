@@ -1,0 +1,462 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.html {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font: 10px;
+}
+
+.row {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    justify-self: center;
+    background: #fff;
+}
+
+.body-content .row {
+    margin-top: 200px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* header */
+
+.menu-header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.menu-bar {
+    min-height: 90px;
+    background: #3670d5;
+    text-align: center;
+    z-index: 5;
+}
+
+.menu-bar ul {
+    display: inline-flex;
+    list-style: none;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-bar ul .search {
+    width: 300px;
+    height: 50px;
+    align-items: center;
+}
+
+.menu-bar ul li {
+    width: 120px;
+    margin: 15px;
+    padding: 15px;
+    position: relative;
+}
+
+.menu-bar ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu-bar ul li .fa {
+    margin-right: 5px;
+}
+
+.active,
+.menu-bar ul li:hover {
+    background: #62a6ef;
+    border-radius: 3px;
+}
+
+.sub-menu-service {
+    display: none;
+}
+
+.menu-bar ul li:hover .sub-menu-1 {
+    display: block;
+    position: absolute;
+    background: #4e8fd6;
+    margin-top: 15px;
+    margin-left: -15px;
+    border-radius: 5px;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul {
+    display: block;
+    margin: 10px;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li {
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child {
+    border-bottom: none;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover {
+    color: #d2e7fd;
+}
+
+.sub-menu-1 {
+    display: none;
+}
+
+.search {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow-x: hidden;
+}
+
+.search span {
+    display: inline-block;
+    padding: 0rem 1rem;
+    font-size: 3rem;
+}
+
+.search input {
+    height: 100%;
+    padding: .5rem;
+    border: none;
+    outline: none;
+}
+
+.body-3 {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+
+/* header */
+
+
+/* footer */
+
+footer {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    background: linear-gradient(to bottom, #3670d5 0%, #210097 100%);
+    color: #fff;
+    padding: 40px 0 20px;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+footer .row {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+footer .col {
+    flex-basis: 25%;
+    padding: 5px;
+}
+
+.logo {
+    width: 200px;
+    margin-bottom: 30px;
+}
+
+footer .col h3 {
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+footer a {
+    color: #fff;
+}
+
+footer ul li {
+    list-style: none;
+    margin-bottom: 12px;
+}
+
+footer .row .col-2 h3 {
+    text-align: center;
+}
+
+footer .row .col-2 li {
+    list-style: none;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+footer .row .col-2 a:hover {
+    color: #000;
+}
+
+footer .row .col-4 {
+    text-align: center;
+}
+
+.opening-hours li {
+    text-align: center;
+}
+
+footer .information {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+}
+
+.information .far {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #000;
+    background: #fff;
+    margin-right: 15px;
+    cursor: pointer;
+    margin-bottom: 35px;
+}
+
+.social-icons .fab {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #000;
+    background: #fff;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.color-red {
+    color: red;
+}
+
+.float-right {
+    text-align: center;
+}
+
+hr {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    margin: 20px;
+}
+
+.copyright {
+    text-align: center;
+}
+
+
+/* footer */
+
+
+/*duc*/
+
+.text {
+    width: 10%;
+    height: 140px;
+    color: #8bc43f;
+    position: relative;
+    padding-top: 40px;
+    padding-left: 0px;
+}
+
+#contact p {
+    font-size: 24px;
+}
+
+.benefit {
+    min-width: 100%;
+    background-color: skyblue;
+}
+
+.benefit1 {
+    /* border: 1px solid red;*/
+    padding: 25px;
+    display: flex;
+}
+
+.menu {
+    border: 1px black solid;
+    width: 33%;
+    min-height: 25%;
+    justify-content: center;
+    background-color: white;
+    border-radius: 25px;
+    padding: 1%;
+    margin: 1%;
+}
+
+.fa-solid {
+    /* border: 1px solid black;*/
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: skyblue;
+    display: inline-block;
+    padding: 1px;
+}
+
+#fa-solid {
+    /*  display: inline-flex;*/
+    width: 20%;
+    display: table-cell;
+    border-radius: 50%;
+    font-size: 28px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.tittle {
+    width: 80%;
+    text-align: center;
+    float: left;
+    margin-right: 10px;
+}
+
+.menu .menu1 {
+    font-size: 28px;
+}
+
+.explain {
+    margin-top: 20px;
+}
+
+p {
+    font-size: 18px;
+}
+
+#row {
+    display: flex;
+}
+
+h3 {
+    font-size: auto;
+    margin-bottom: 15px;
+}
+
+.listup {
+    list-style-type: none;
+    display: inline-block;
+    padding-top: 15px;
+}
+
+.listup li {
+    float: left;
+    padding-right: 5px;
+}
+
+li a {
+    text-decoration: none;
+}
+
+.service_1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.implants {
+    width: 100%;
+    background-color: lightgray;
+    margin-bottom: 25px;
+    padding-left: 5px;
+}
+
+#implant1 {
+    margin-left: 15px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 32px;
+    background-color: blue;
+    color: white;
+}
+
+#implant2 table {
+    border: 1px solid;
+    text-align: center;
+}
+
+#implant2 tr,
+#implant2 th,
+#implant2 td {
+    border: 1px solid;
+    padding: 5px;
+    font-size: 18px;
+}
+
+#implant2 th {
+    background-color: #f2f3f5;
+}
+
+#implant3 {
+    width: 32%;
+    float: left;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 0.5%;
+}
+
+.service-content {
+    margin-top: 110px;
+}
+
+.service-frame {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    width: 400px;
+    position: fixed;
+    bottom: initial;
+    display: block;
+    background-color: lightblue;
+    border-radius: 5px;
+    margin-bottom: 200px;
+}
+
+.form-group {
+    margin: 5px;
+}
+
+.label {
+    font-size: 20px;
+}
+
+.form-control {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+/*duc*/
