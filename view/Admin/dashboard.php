@@ -7,7 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../../css/dashboard.css">
+    <link rel="icon" type="image/png" href="../images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../images/favicon/favicon-16x16.png" sizes="16x16">
 </head>
 
 <body>
@@ -15,28 +17,28 @@
     <input type="checkbox" id="nav-toggle">
     <div class="sidebar">
         <div class="sidebar-brand">
-            <h2><span class="lab la-accusoft"></span><span>Dento</span></h2>
+            <h2><span class="las la-tooth"></span><span>Dento</span></h2>
         </div>
         <div class="sidebar-menu">
             <ul>
-                <li>
-                    <a href="dashboard.html" class="active"><span class="las la-igloo"></span>
+                <li class="not-hover">
+                    <a href="dashboard.php" class="active"><span class="las la-igloo"></span>
                     <span>Dashboard</span></a>
                 </li>
                 <li>
-                    <a href=""><span class="las la-receipt"></span>
+                    <a href="dashboard-add.php"><span class="las la-plus-circle"></span>
                     <span>Add</span></a>
                 </li>
                 <li>
-                    <a href=""><span class="las la-clipboard-list"></span>
+                    <a href="dashboard-list.php"><span class="las la-clipboard-list"></span>
                     <span>List</span></a>
                 </li>
                 <li>
-                    <a href=""><span class="las la-shopping-bag"></span>
+                    <a href="dashboard-service-order.php"><span class="las la-shopping-bag"></span>
                     <span>Service order</span></a>
                 </li>
                 <li>
-                    <a href=""><span class="las la-users-cog"></span>
+                    <a href="dashboard-account.php"><span class="las la-users-cog"></span>
                     <span>Account</span></a>
                 </li>
             </ul>
@@ -45,11 +47,7 @@
 
     <div class="main-content">
         <header>
-            <h2>
-                <label for="nav-toggle">
-                        <span class="las la-bars"></span>
-                </label> Dashboard
-            </h2>
+            <h2><label for="nav-toggle"><span class="las la-bars"></span></label> Dashboard</h2>
             <div class="search-wrapper">
                 <span class="las la-search"></span>
                 <input type="search" placeholder="Search">
@@ -98,7 +96,7 @@
                         <span>Income</span>
                     </div>
                     <div>
-                        <span class="lab la-google-wallet"></span>
+                        <span class="las la-hand-holding-usd"></span>
                     </div>
                 </div>
             </div>

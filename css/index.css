@@ -70,7 +70,7 @@ body {
 /*css for manual slide navigation*/
 
 .body-content .navigation-manual {
-    position: relative;
+    position: absolute;
     width: 800px;
     margin-top: -40px;
     display: flex;
@@ -226,7 +226,7 @@ body {
     position: absolute;
     top: 70%;
     left: 10px;
-    /*color: rgb(255, 0, 0);*/
+    color: rgb(255, 0, 0);
     display: flex;
     flex-direction: column;
     visibility: hidden;
@@ -281,8 +281,8 @@ body {
     margin-left: 10px;
 }
 
-.card-items .card-title .card-content {
-    margin-top: 10px;
+.card-content {
+    margin-top: 25px;
     margin-bottom: 10px;
 }
 
@@ -296,13 +296,304 @@ body {
     margin-bottom: 10px;
 }
 
+.dentist-card .btn a {
+    color: #fff;
+}
+
+.about-us {
+    margin-top: 20px;
+    margin-bottom: 70px;
+}
+
 
 /* Blog */
 
 
+/*aboutus*/
+
+.aboutus {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+/**{
+    margin: 0px;
+    padding: 0px;
+}*/
+
+.section-heading {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 50px;
+}
+
+.section-heading h2 {
+    font-size: 2rem;
+}
+
+.section-heading .line {
+    width: 70px;
+    height: 4px;
+    background-color: #00aeef;
+}
+
+.aboutus p {
+    line-height: 1.9;
+    color: #707070;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.single_skill {
+    position: relative;
+    z-index: 1;
+}
+
+.mt-30 {
+    margin-top: 30px;
+}
+
+.single_skill h6 {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.barfiller {
+    width: 100%;
+    height: 10px;
+    background-color: #f4f4f4;
+    border: none;
+    position: relative;
+    z-index: 1;
+}
+
+.barfiller .tip {
+    margin-top: -35px;
+    padding: 0px;
+    font-size: 16px;
+    color: #333333;
+    font-weight: 600;
+    left: 0;
+    position: absolute;
+    z-index: 2;
+    background: transparent;
+    right: 0;
+    text-align: right;
+}
+
+.barfiller .fill {
+    display: block;
+    position: relative;
+    height: 100%;
+    z-index: 1;
+    width: 0;
+    background-color: #333;
+}
+
+
+/*aboutus*/
+
+
+/*Member*/
+
+.member {
+    position: relative;
+    margin-left: 30px;
+    width: 95%;
+}
+
+.member-title {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    color: blue;
+}
+
+.member-items {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+figure.snip0060 {
+    font-family: 'Raleway', Arial, sans-serif;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    min-width: 220px;
+    max-width: 310px;
+    max-height: 500px;
+    width: 100%;
+    background: #000000;
+    text-align: left;
+    border-radius: 10px;
+}
+
+figure.snip0060 * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+figure.snip0060 img {
+    opacity: 1;
+    width: 100%;
+}
+
+figure.snip0060 figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+figure.snip0060 figcaption>div {
+    height: 50%;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+figure.snip0060 figcaption::before {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 100%;
+    height: 2px;
+    content: '';
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0);
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+    -webkit-transition-delay: 0.6s;
+    transition-delay: 0.6s;
+}
+
+figure.snip0060 i,
+figure.snip0060 p {
+    margin: 0;
+    opacity: 0;
+    width: 100%;
+}
+
+figure.snip0060 i {
+    width: 150px;
+    height: 38px;
+    line-height: 38px;
+    padding-left: 5px;
+    text-align: left;
+    position: absolute;
+    font-size: 28px;
+    display: block;
+    bottom: 0;
+    left: 30px;
+    background: #000000;
+    -webkit-transform: translate3d(0%, 50%, 0);
+    transform: translate3d(0%, 50%, 0);
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+figure.snip0060 p {
+    font-size: 28px;
+    color: white;
+    padding: 10px 35px;
+    font-weight: 500;
+    -webkit-transform: translate3d(0%, -50%, 0);
+    transform: translate3d(0%, -50%, 0);
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+figure.snip0060 a {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    color: #ffffff;
+}
+
+figure.snip0060.blue {
+    background: #091b27;
+}
+
+figure.snip0060.blue i {
+    background: #2980b9;
+}
+
+figure.snip0060.red {
+    background: #2e0e0a;
+}
+
+figure.snip0060.red i {
+    background: #c0392b;
+}
+
+figure.snip0060.yellow {
+    background: #4d2909;
+}
+
+figure.snip0060.yellow i {
+    background: #e67e22;
+}
+
+figure.snip0060.green {
+    background: #061c10;
+}
+
+figure.snip0060.green i {
+    background: #27ae60;
+}
+
+figure.snip0060.navy {
+    background: #000000;
+}
+
+figure.snip0060.navy i {
+    background: #34495e;
+}
+
+figure.snip0060:hover img,
+figure.snip0060.hover img {
+    opacity: 0.35;
+}
+
+figure.snip0060:hover figcaption i,
+figure.snip0060.hover figcaption i,
+figure.snip0060:hover figcaption p,
+figure.snip0060.hover figcaption p,
+figure.snip0060:hover figcaption h3,
+figure.snip0060.hover figcaption h3 {
+    -webkit-transform: translate3d(0%, 0%, 0);
+    transform: translate3d(0%, 0%, 0);
+    -webkit-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+    opacity: 1;
+}
+
+figure.snip0060:hover figcaption::before,
+figure.snip0060.hover figcaption::before {
+    background: rgba(255, 255, 255, 0.8);
+    left: 30px;
+    opacity: 1;
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+
+/*Member*/
+
+
 /* header */
 
-/*duc*/
 .menu-header {
     width: 100%;
     position: absolute;
@@ -389,6 +680,25 @@ body {
 
 .sub-menu-1 {
     display: none;
+}
+
+.search {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow-x: hidden;
+}
+
+.search span {
+    display: inline-block;
+    padding: 0rem 1rem;
+    font-size: 3rem;
+}
+
+.search input {
+    height: 100%;
+    padding: .5rem;
+    border: none;
+    outline: none;
 }
 
 .body-3 {
@@ -523,123 +833,3 @@ hr {
 
 
 /* footer */
-.center {
-  margin: 0 auto; 
-  padding: 15px;
-  width: 720px;
-}
-h1 {
-  font-family: 'Lato', sans-serif;
-  font-weight: 700; 
-}
-p {
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
-}
-.row {
-  margin-top: 48px;
-}
-.description {
-  margin-top: 24px;
-}
-.description p{
-  text-align: center;
-  font-weight: 400;
-  font-size: 16px;
-}
-
-/*With :after */
-figure.test { 
-  display: inline-block;
-  position: relative;
-  overflow: hidden; 
-  text-align: center;   
-  cursor: pointer;
-}
-figure.test img {
-  width: 100%;
-  height: 100%;
-}
-figure.test figcaption {
-  position: absolute;
-  top: 82%;
-  left: 22.5%;
-  right: 22.5%; 
-  width: 400px;
-  opacity: 0;
-  z-index: 1;
-  transition: all 0.8s ease-out;
-  transition-delay: 0.2s;
-}
-figure.test:after {
-  display: inline-block;
-  position: absolute;
-  content: "";
-  top: 70%;
-  left: 10%;
-  right: 10%;
-  bottom: 7%;
-  background: #e6f0f2;
-  opacity: 0;
-  transition: all 0.8s ease-out;
-}
-figure.test:hover:after {
-  opacity: 0.9;
-}
-figure.test:hover figcaption {
-  transform: translateY(-50%);
-  opacity: 1;
-}
-
-#rotate {
-  perspective: 500px;
-}
-#rotate:after {
-  transform: rotateX(90deg);
-  transition: all 0.6s ease-in-out;
-}
-#rotate:hover:after {
-  transform: rotateX(0deg);
-}
-#rotate figcaption {  
-  transition: all 0.6s ease-in-out;
-  transform: translateY(-50%) rotateX(90deg);
-}
-#rotate:hover figcaption {
-  transform: translateY(-50%) rotateX(0);
-}
-
-/*Without :after*/
-.frame {
-  text-align: center; 
-  position: relative;
-  cursor: pointer;  
-  perspective: 500px; 
-}
-.frame img {
-  width: 100%;
-  height: 100%;
-}
-.frame .details {
-  width: 75%;
-  height: 80%;  
-  padding: 5% 10%;
-  position: absolute; 
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotateY(90deg);
-  transform-origin: 50%;
-  background: rgba(255,255,255,0.9);  
-  opacity: 0;
-  transition: all 0.4s ease-in;
-  
-}
-.frame:hover .details {
-  transform: translate(-50%, -50%) rotateY(0deg);
-  opacity: 1;
-}
-
-/*Effect without Perspective*/
-.frame#wth {
-  perspective: none;
-}
