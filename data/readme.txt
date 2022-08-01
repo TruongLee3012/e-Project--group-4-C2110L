@@ -4,6 +4,7 @@ create table if not exists users (
 	email varchar(150),
     address varchar(200),
     phone varchar(11),
+    password varchar(30),
     create_at datetime,
     update_at datetime
 )

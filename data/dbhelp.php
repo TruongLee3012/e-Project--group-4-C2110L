@@ -25,3 +25,32 @@ function executeResult($sql, $isSingle = false) {
 
 	return $data;
 }
+
+function getPost($key) {
+	$value = '';
+	if(isset($_POST[$key])) {
+		$value = $_POST[$key];
+		$value = fix_sql_injection($value);
+	}
+
+	return $value;
+}
+
+function getGet($key) {
+	$value = '';
+	if(isset($_GET[$key])) {
+		$value = $_GET[$key];
+		$value = fix_sql_injection($value);
+	}
+
+	return $value;
+}
+
+function fix_sql_injection($str, $replace = "'") {
+	return str_replace("'", "\\'", $str);
+}
+
+function getMD5Security($pwd) {
+	//&^384jdsgfJFFas826^%6523j -> go la j cung dc
+	return md5(md5($pwd).'&^384jdsgfJFFas826^%6523j');
+}

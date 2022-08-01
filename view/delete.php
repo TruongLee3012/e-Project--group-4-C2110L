@@ -16,4 +16,5 @@ function delete(){
   $rows = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM blog WHERE id = $id"));
 
   mysqli_query($conn, "DELETE FROM blog WHERE id = $id");
+
 }

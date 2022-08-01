@@ -62,6 +62,10 @@ $item = executeResult("select * from blog where id = $id", true);
                     <a href="dashboard-account.php"><span class="las la-users-cog"></span>
                     <span>Account</span></a>
                 </li>
+                <li>
+                    <a href="logout.php"><span class="las la-sign-out-alt"></span>
+                    <span>Log out</span></a>
+                </li>
             </ul>
         </div>
     </div>
