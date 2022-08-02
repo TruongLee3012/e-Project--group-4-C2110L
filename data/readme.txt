@@ -4,6 +4,7 @@ create table if not exists users (
 	email varchar(150),
     address varchar(200),
     phone varchar(11),
+    password varchar(30),
     create_at datetime,
     update_at datetime
 )
@@ -42,8 +43,8 @@ create table if not exists service_orders(
     address varchar(200),
     service varchar(200),
     content varchar(400),
-    create_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    update_at datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    create_at datetime,
+    update_at datetime
 )
 
 create table if not exists blog(

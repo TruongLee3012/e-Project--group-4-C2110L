@@ -422,7 +422,7 @@ h1 {
 }
 
 #implant3 {
-    width: 32%;s
+    width: 32%;
     float: left;
     border: 1px solid black;
     border-radius: 10px;
@@ -438,11 +438,11 @@ h1 {
     padding: 15px;
     width: 400px;
   
-   /* bottom: initial;*/
-    /*display: block;*/
+    bottom: initial;
+    display: block;
     background-color: lightblue;
- /*   border-radius: 5px;*/
-   /* margin-bottom: 200px;*/
+    border-radius: 5px;
+    margin-bottom: 200px;
 }
 
 .form-group {

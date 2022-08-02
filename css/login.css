@@ -60,6 +60,7 @@ input {
     border-radius: 4px;
 }
 
+input[type="text"],
 input[type="password"],
 input[type="email"] {
     width: 100%;
@@ -77,50 +78,36 @@ input[type="email"] {
     background: none;
 }
 
-input[type="fullname"]:focus:invalid,
-input[type="phone"]:focus:invalid,
-input[type="address"]:focus:invalid,
-input[type="password"]:focus:invalid,
+input[type="password"]:focus,
+input[type="text"]:focus,
 input[type="email"]:focus {
     border-color: #3ca9e2;
 }
 
-input[type="fullname"]:focus:invalid,
-input[type="phone"]:focus:invalid,
-input[type="address"]:focus:invalid,
 input[type="password"]:focus:invalid,
-input[type="password"]:focus:invalid,
+input[type="text"]:focus:invalid,
 input[type="email"]:focus:invalid {
     color: #cc1e2b;
     border-color: #cc1e2b;
 }
 
-input[type="fullname"]:valid~.validation,
-input[type="phone"]:valid~.validation,
-input[type="address"]:valid~.validation,
 input[type="password"]:valid~.validation,
-input[type="password"]:valid~.validation,
+input[type="text"]:valid~.validation,
 input[type="email"]:valid~.validation {
     display: block;
     border-color: #0C0;
 }
 
-input[type="fullname"]:valid~.validation span,
-input[type="phone"]:valid~.validation span,
-input[type="address"]:valid~.validation span,
 input[type="password"]:valid~.validation span,
-input[type="password"]:valid~.validation span,
+input[type="text"]:valid~.validation span,
 input[type="email"]:valid~.validation span {
     background: #0C0;
     position: absolute;
     border-radius: 6px;
 }
 
-input[type="fullname"]:valid~.validation span:first-child,
-input[type="phone"]:valid~.validation span:first-child,
-input[type="address"]:valid~.validation span:first-child,
 input[type="password"]:valid~.validation span:first-child,
-input[type="password"]:valid~.validation span:first-child,
+input[type="text"]:valid~.validation span:first-child,
 input[type="email"]:valid~.validation span:first-child {
     top: 30px;
     left: 14px;
@@ -130,10 +117,7 @@ input[type="email"]:valid~.validation span:first-child {
     transform: rotate(-45deg);
 }
 
-input[type="fullname"]:valid~.validation span:last-child,
-input[type="phone"]:valid~.validation span:last-child,
-input[type="address"]:valid~.validation span:last-child,
-input[type="password"]:valid~.validation span:last-child,
+input[type="text"]:valid~.validation span:last-child,
 input[type="password"]:valid~.validation span:last-child,
 input[type="email"]:valid~.validation span:last-child {
     top: 35px;

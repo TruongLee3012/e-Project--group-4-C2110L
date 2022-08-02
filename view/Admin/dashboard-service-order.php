@@ -1,7 +1,22 @@
 
 <?php 
+session_start();
+
+if(!isset($_SESSION['user'])) {
+    header('Location: login.php');
+    die();
+}
 
 require_once('../../data/dbhelp.php');
+
+$email = $pwd = "";
+
+if(isset($_SESSION['user'])) {
+    $email = $_SESSION['user']['email'];
+    $pwd = $_SESSION['user']['pwd'];
+}
+
+
  $sql="select * from service_orders";
         $list = executeResult($sql);
 
@@ -63,6 +78,10 @@ require_once('../../data/dbhelp.php');
                 <li>
                     <a href="dashboard-account.php"><span class="las la-users-cog"></span>
                     <span>Account</span></a>
+                </li>
+                 <li>
+                    <a href="logout.php"><span class="las la-sign-out-alt"></span>
+                    <span>Log out</span></a>
                 </li>
             </ul>
         </div>

@@ -2,38 +2,38 @@
 session_start();
 
 if(isset($_SESSION['user'])) {
-	header('Location: dashboard.php');
-	die();
+    header('Location: dashboard.php');
+    die();
 }
 
-require_once('../data/dbhelp.php');
+require_once('../../data/dbhelp.php');
 
 $fullname = $email = $pwd = $phone = $address = $msg = "";
 
 if(!empty($_POST)) {
-	// $fullname = $_POST['fullname'];
-	// $email = $_POST['email'];
-	// $pwd = $_POST['pwd'];
-	$fullname = getPost('fullname');
-	$email = getPost('email');
-	$pwd = getPost('pwd');
-	$pwd = getMD5Security($pwd);
+    // $fullname = $_POST['fullname'];
+    // $email = $_POST['email'];
+    // $pwd = $_POST['pwd'];
+    $fullname = getPost('fullname');
+    $email = getPost('email');
+    $pwd = getPost('pwd');
+    $pwd = getMD5Security($pwd);
     $phone = getPost('phone');
     $address = getPost('address');
 
-	// Them du lieu vao database
-	$sql = "select * from users where email = '$email'";
-	$data = executeResult($sql, true);
+    // Them du lieu vao database
+    $sql = "select * from users where email = '$email'";
+    $data = executeResult($sql, true);
 
-	if($data != null) {
-		//Tai khoan da ton tai
-		$msg = "Email existed";
-	} else {
-		$sql = "insert into users (fullname, email, password, phone, address) values ('$fullname', '$email', '$pwd' ,'$phone', '$address')";
-		execute($sql);
-		$fullname = $email = $pwd = $phone = $address = $msg = "";
+    if($data != null) {
+        //Tai khoan da ton tai
+        $msg = "Email existed";
+    } else {
+        $sql = "insert into users (fullname, email, password, phone, address) values ('$fullname', '$email', '$pwd' ,'$phone', '$address')";
+        execute($sql);
+        $fullname = $email = $pwd = $phone = $address = $msg = "";
         header('Location:login.php');
-	}
+    }
 }
 ?>
 
@@ -44,7 +44,7 @@ if(!empty($_POST)) {
     <meta charset="UTF-8">
     <title>Register</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../../css/login.css">
 
 </head>
 

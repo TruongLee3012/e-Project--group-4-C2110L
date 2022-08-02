@@ -1,18 +1,33 @@
 <?php
 require_once('../../data/dbhelp.php');
+session_start();
+
+if(!isset($_SESSION['user'])) {
+    header('Location: login.php');
+    die();
+}
+
+
+$email = $pwd = "";
+
+if(isset($_SESSION['user'])) {
+    $email = $_SESSION['user']['email'];
+    $pwd = $_SESSION['user']['pwd'];
+}
+
 
 if(!empty($_POST)) {
-	$id = $_POST['id'];
-	$name = $_POST['name'];
-	$image = $_POST['image'];
-	$content = $_POST['content'];
-	$update_at = $create_at = date('Y-m-d H:i:s');
+    $id = $_POST['id'];
+    $name = $_POST['name'];
+    $image = $_POST['image'];
+    $content = $_POST['content'];
+    $update_at = $create_at = date('Y-m-d H:i:s');
 
-	$sql = "update blog set name = '$name', image = '$image', content = '$content', update_at = '$update_at' where id = $id";
-	execute($sql);
+    $sql = "update blog set name = '$name', image = '$image', content = '$content', update_at = '$update_at' where id = $id";
+    execute($sql);
 
     header('Location: dashboard-list.php');
-	die();
+    die();
 }
 
 $id = $_GET['id'];
@@ -28,10 +43,9 @@ $item = executeResult("select * from blog where id = $id", true);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Page</title>
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-    <link rel="stylesheet" href="../../css/dashboard.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="icon" type="image/png" href="../images/favicon/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="../images/favicon/favicon-16x16.png" sizes="16x16">
-  
 </head>
 
 <body>
@@ -63,6 +77,10 @@ $item = executeResult("select * from blog where id = $id", true);
                     <a href="dashboard-account.php"><span class="las la-users-cog"></span>
                     <span>Account</span></a>
                 </li>
+                <li>
+                    <a href="logout.php"><span class="las la-sign-out-alt"></span>
+                    <span>Log out</span></a>
+                </li>
             </ul>
         </div>
     </div>
@@ -88,13 +106,13 @@ $item = executeResult("select * from blog where id = $id", true);
         </header>
 
         <main>
-            <div class="card">
+            <div class="cards">
                 <form method="post">
                 <p>Title: </p>
                 <input type="hidden" name="id" value="<?=$id?>">
-                <input type="text" name="name" placeholder="Enter title" value="<?=$item['name']?>" style="width: 96%">
+                <input type="text" name="name" placeholder="Enter title" value="<?=$item['name']?>">
                 <p>Thumbnail: </p>
-                <input type="text" name="image" placeholder="Enter thumbnail" value="<?=$item['image']?>" style="width: 96%">
+                <input type="text" name="image" placeholder="Enter thumbnail" value="<?=$item['image']?>">
                 <p>Content: </p>
                 <textarea rows="5" style="width: 96%" name="content"><?=$item['content']?></textarea>
                 <p><a href="dashboard-list.php">Back to list</a></p>

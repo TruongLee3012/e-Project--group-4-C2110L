@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Account Page</title>
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-    <link rel="stylesheet" href="../../css/dashboard.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="icon" type="image/png" href="../images/favicon/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="../images/favicon/favicon-16x16.png" sizes="16x16">
 </head>
@@ -40,6 +41,10 @@
                 <li class="not-hover">
                     <a href="dashboard-account.php" class="active"><span class="las la-users-cog"></span>
                     <span>Account</span></a>
+                </li>
+                <li>
+                    <a href="logout.php"><span class="las la-sign-out-alt"></span>
+                    <span>Log out</span></a>
                 </li>
             </ul>
         </div>

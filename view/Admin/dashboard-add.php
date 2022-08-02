@@ -1,14 +1,31 @@
 <?php
+
+session_start();
+
+if(!isset($_SESSION['user'])) {
+    header('Location: login.php');
+    die();
+}
+
+require_once('../../data/dbhelp.php');
+
+$email = $pwd = "";
+
+if(isset($_SESSION['user'])) {
+    $email = $_SESSION['user']['email'];
+    $pwd = $_SESSION['user']['pwd'];
+}
+
 if(!empty($_POST)) {
-	require_once('../../data/dbhelp.php');
+   
 
-	$name = $_POST['name'];
-	$image = $_POST['image'];
-	$content = $_POST['content'];
-	$update_at = $create_at = date('Y-m-d H:i:s');
+    $name = $_POST['name'];
+    $image = $_POST['image'];
+    $content = $_POST['content'];
+    $update_at = $create_at = date('Y-m-d H:i:s');
 
-	$sql = "insert into blog(name, image, content, create_at, update_at) values ('$name', '$image', '$content', '$create_at', '$update_at')";
-	execute($sql);
+    $sql = "insert into blog(name, image, content, create_at, update_at) values ('$name', '$image', '$content', '$create_at', '$update_at')";
+    execute($sql);
 }
 ?>
 
@@ -21,7 +38,7 @@ if(!empty($_POST)) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Page</title>
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-    <link rel="stylesheet" href="../../css/dashboard.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="icon" type="image/png" href="../images/favicon/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="../images/favicon/favicon-16x16.png" sizes="16x16">
 </head>
@@ -55,6 +72,10 @@ if(!empty($_POST)) {
                     <a href="dashboard-account.php"><span class="las la-users-cog"></span>
                     <span>Account</span></a>
                 </li>
+                <li>
+                    <a href="logout.php"><span class="las la-sign-out-alt"></span>
+                    <span>Log out</span></a>
+                </li>
             </ul>
         </div>
     </div>
@@ -83,11 +104,11 @@ if(!empty($_POST)) {
             <div class="cards">
                 <form method="post">
                     <p>Title: </p>  
-                    <input type="text" name="name" placeholder="Enter title" style="width: 96%">
+                    <input type="text" name="name" placeholder="Enter title">
                     <p>Thumbnail: </p>
-                    <input type="text" name="image" placeholder="Enter thumbnail" style="width: 96%">
+                    <input type="text" name="image" placeholder="Enter thumbnail">
                     <p>Price: </p>
-                    <input type="number" name="price" placeholder="Enter price" style="width: 96%">
+                    <input type="number" name="price" placeholder="Enter price">
                     <p>Content: </p>
                     <textarea rows="5" style="width: 96%" name="content"></textarea>
                     <p><a href="dashboard-list.php">Back to list</a></p>

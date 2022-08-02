@@ -31,8 +31,8 @@
             <nav class="menu-bar">
                 <ul>
                     <img src="../../images/resources/logo-2.png">
-                    <li><a href="../index.html"><i class="fa fa-home"></i>Home</a></li>
-                    <li class="active"><a href="about_us.html">About Us</a></li>
+                    <li><a href="../index.php"><i class="fa fa-home"></i>Home</a></li>
+                    <li class="active"><a href="about_us.php">About Us</a></li>
                     <li><a href="#"><i class="fa fa-user-doctor"></i>Doctor</a></li>
                     <li><a href="#"><i class="fa fa-user-check"></i>Service</a>
                         <div class="sub-menu-1">
@@ -51,7 +51,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li><a href="product.html"><i class="las la-shopping-cart"></i>Product</a></li>
+                    <li><a href="product.php"><i class="las la-shopping-cart"></i>Product</a></li>
                     <li><a href="#"><i class="fa fa-blog"></i>Blog</a></li>
                     <div>
                         <span class="las la-search"></span>
@@ -304,11 +304,11 @@
             </div>
             <div class="col-2">
                 <h3>Link</h3>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="../index.php">Home</a></li>
+                <li><a href="about_us.php">About Us</a></li>
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Service</a></li>
-                <li><a href="product.html">Product</a></li>
+                <li><a href="product.php">Product</a></li>
             </div>
             <div class="col-4">
                 <h3>Opening Hour</h3>

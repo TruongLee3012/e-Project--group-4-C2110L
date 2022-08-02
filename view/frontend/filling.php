@@ -53,7 +53,7 @@ $fullname = $age = $email = $address = $service_content = $service = '';
             <nav class="menu-bar">
                 <ul>
                     <img src="../../images/resources/logo-2.png">
-                    <li><a href="../../index.html"><i class="fa fa-home"></i>Home</a></li>
+                    <li><a href="../../index.php"><i class="fa fa-home"></i>Home</a></li>
                     <li><a href="about_us.php">About Us</a></li>
                     <li><a href="#"><i class="fa fa-user-doctor"></i>Doctor</a></li>
                     <li class="active"><a href="#"><i class="fa fa-user-check"></i>Service</a>
@@ -86,7 +86,7 @@ $fullname = $age = $email = $address = $service_content = $service = '';
     <!-- end header -->
     <div class="container service-content">
         <ol class="listup">
-            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../index.php">Home</a></li>
             <li>></li>
             <li>Service</li>
             <li>></li>
@@ -225,11 +225,11 @@ $fullname = $age = $email = $address = $service_content = $service = '';
             </div>
             <div class="col-2">
                 <h3>Link</h3>
-                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../index.php">Home</a></li>
                 <li><a href="about_us.php">About Us</a></li>
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Service</a></li>
-                <li><a href="product.html">Product</a></li>
+                <li><a href="product.php">Product</a></li>
             </div>
             <div class="col-4">
                 <h3>Opening Hour</h3>

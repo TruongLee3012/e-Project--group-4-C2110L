@@ -1,6 +1,25 @@
 <?php
+session_start();
+
+if(!isset($_SESSION['user'])) {
+    header('Location: login.php');
+    die();
+}
+
 require_once('../../data/dbhelp.php');
+
+$email = $pwd = "";
+
+if(isset($_SESSION['user'])) {
+    $email = $_SESSION['user']['email'];
+    $pwd = $_SESSION['user']['pwd'];
+}
+use function PHPSTORM_META\type;
+
+
 $dataList = executeResult('select * from blog');
+
+
 ?>
 
 <!DOCTYPE html>
@@ -12,20 +31,10 @@ $dataList = executeResult('select * from blog');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>List Page</title>
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-    <link rel="stylesheet" href="../../css/dashboard.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
     <link rel="icon" type="image/png" href="../images/favicon/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="../images/favicon/favicon-16x16.png" sizes="16x16">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
-    />
-
-    <script src="https://kit.fontawesome.com/d953ad999c.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
- 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="reset.css">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -57,6 +66,10 @@ $dataList = executeResult('select * from blog');
                     <a href="dashboard-account.php"><span class="las la-users-cog"></span>
                     <span>Account</span></a>
                 </li>
+                <li>
+                    <a href="logout.php"><span class="las la-sign-out-alt"></span>
+                    <span>Log out</span></a>
+                </li>
             </ul>
         </div>
     </div>
@@ -73,7 +86,7 @@ $dataList = executeResult('select * from blog');
                 <input type="search" placeholder="Search">
             </div>
             <div class="user-wrapper">
-                <img src="../../images/test-admin.jpg" width="40px" height="40px" alt="">
+                <img src="../images/test-admin.jpg" width="40px" height="40px" alt="">
                 <div>
                     <h4>Truong Lee</h4>
                     <small>Admin</small>
@@ -82,11 +95,11 @@ $dataList = executeResult('select * from blog');
         </header>
 
         <main>
-            <div class="container table-responsive-sm">
+            <div class="cards">
                 <a href="dashboard-add.php"><button>Add Blog</button></a>
-                    <table class="table table-bordered">
+                    <table border="1" style="width: 100%">
                         <thead>
-                            <tr class="table-primary"  style="text-align: center;">
+                            <tr>
                                 <th>No</th>
                                 <th>Title</th>
                                 <th>Thumbnail</th>
@@ -110,7 +123,7 @@ $dataList = executeResult('select * from blog');
                                 <a href="dashboard-edit.php?id='.$item['id'].'"><button>Edit</button></a>
                             </td>
                             <td>
-                                <a href="dashboard-delete.php?id='.$item['id'].'"><button>Delete</button></a>
+                               <button type="button" name="button" onclick = "deleteblog('.$item['id'].');">Delete</button>
                             </td>
                         </tr>';
                 }
@@ -119,6 +132,34 @@ $dataList = executeResult('select * from blog');
                     </table>
                 </div>
             </main>
+            <script type="text/javascript">
+            // Function
+            function deleteblog(id){
+                $(document).ready(function(){
+                $.ajax({
+                    // Action
+                    url: 'delete.php',
+                    // Method
+                    type: 'POST',
+                    data: {
+                    // Get value
+                    id: id,
+                    action: "delete"
+                    },
+                    success:function(response){
+                    // Response is the output of action file
+                    if(response == 0){
+                        alert("Data Deleted Successfully");
+                        document.getElementById(id).style.display = "none";
+                    }
+                    else if(response == 1){
+                        alert("Data Cannot Be Deleted");
+                    }
+                    }
+                });
+                });
+            }
+            </script>
     </div>
 
 </body>
