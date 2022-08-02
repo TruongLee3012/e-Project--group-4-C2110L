@@ -143,8 +143,8 @@ body {
 }
 
 .body-3 {
-    margin-top: 200px;
-    margin-bottom: 100px;
+    margin-top: 150px;
+    margin-bottom: 50px;
 }
 
 
@@ -279,43 +279,86 @@ hr {
 
 /*blog*/
 
+.blog-table {
+   width: 50%;
+   margin: auto;
+   border: solid;
+   border-radius: 30px;
+   border-width: 2px;
+   border-color: #8bc43f;
+   padding: 20px;
+   margin-bottom: 50px;
+}
+
+.blog-table h2 {
+    font-family: "Times New Roman", Times, serif;
+    color:  #62a6ef;
+    text-align: center;
+    font-size: 35px;
+}
+
+.page-contents {
+    padding-right: 20px;
+    float: left;
+}
+
+.page-line {
+    border-bottom: solid;
+    border-width: 1px;
+    text-decoration: none;
+}
+.page-line a{
+    text-decoration: none;
+    color: #000;
+     font-family: "Times New Roman", Times, serif;
+     font-size: 20px;
+     letter-spacing: 1px;
+     padding-bottom: 0.1px;
+}
+
 .blog-main {
-    margin: auto;
-    width: 95%;
-    margin-top: 200px;
+    margin-left: 20px;
+    width: 70%;
     margin-bottom: 100px;
+    border-right: solid;
+    border-width: 2px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-color: #8bc43f;
 }
 
 .blog-post {
-    border: solid;
-    border-radius: 30px;
-    border-color: #000;
-    font-size: 25px;
+    border-top: solid;
+    border-width: 2px;
     font-family: "Times New Roman", Times, serif;
-    padding: 10px;
-    margin-bottom: 10px;
+    padding-bottom: 20px;
+    width: 98%;
+    margin-top: 10px;
+    border-color: #8bc43f;
 }
 
 .blog-title {
-    text-align: center;
     font-family: "Times New Roman", Times, serif;
-    color: #62a6ef;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-size: 40px;
+    color:  #62a6ef;
+    padding-top: 20px;
+    font-size: 35px;
+    width: 98%;
+
 }
 
 .blog-write {
-    line-height: 35px;
+    font-size: 20px;
+    line-height: 30px;
     word-wrap: break-word;
-    letter-spacing: 2px;
-    padding: 10px;
+    letter-spacing: 1px;
+    padding-right: 20px;
     float: left;
     width: 80%;
 }
 
 .blog-content {
-    padding: 10px;
+    padding-bottom: 20px;
+    width: 98%;
 }
 
 .blog-content:after {
@@ -332,6 +375,10 @@ hr {
 .blog-content .images img {
     max-width: 100%;
     max-height: 100%;
+}
+
+.blog-date {
+    
 }
 
 /*blog*/
