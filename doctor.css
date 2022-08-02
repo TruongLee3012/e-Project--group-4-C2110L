@@ -1,0 +1,305 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+pd-0 {
+    padding: 0 !important;
+} 
+
+.html {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font: 10px;
+}
+
+.row {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    justify-self: center;
+    background: #fff;
+}
+
+.body-content .row {
+    margin-top: 200px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Dat */
+
+.doctor-infor{
+    margin-top: 200px;
+    margin-bottom: 100px;
+}
+.img-holder{
+    display: flex;
+    justify-content: center;
+}
+.doctor-arena{
+    margin-bottom: 30px;
+}
+.text-holder ul {
+    list-style-type: none;
+    padding-left: 0px !important;
+}
+.text-holder span {
+    color: #71d415;
+    margin: 5px;
+}
+.img-holder img {
+    width: 270px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Dat */
+/* header */
+
+.menu-header {
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.menu-bar {
+    min-height: 90px;
+    background: #3670d5;
+    text-align: center;
+    z-index: 5;
+}
+
+.menu-bar ul {
+    display: inline-flex;
+    list-style: none;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-bar ul .search {
+    width: 300px;
+    height: 50px;
+    align-items: center;
+}
+
+.menu-bar ul li {
+    width: 120px;
+    margin: 15px;
+    padding: 15px;
+    position: relative;
+}
+
+.menu-bar ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu-bar ul li .fa {
+    margin-right: 5px;
+}
+
+.active,
+.menu-bar ul li:hover {
+    background: #62a6ef;
+    border-radius: 3px;
+}
+
+.sub-menu-service {
+    display: none;
+}
+
+.menu-bar ul li:hover .sub-menu-1 {
+    display: block;
+    position: absolute;
+    background: #4e8fd6;
+    margin-top: 15px;
+    margin-left: -15px;
+    border-radius: 5px;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul {
+    display: block;
+    margin: 10px;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li {
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child {
+    border-bottom: none;
+}
+
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover {
+    color: #d2e7fd;
+}
+
+.sub-menu-1 {
+    display: none;
+}
+
+.search {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow-x: hidden;
+}
+
+.search span {
+    display: inline-block;
+    padding: 0rem 1rem;
+    font-size: 3rem;
+}
+
+.search input {
+    height: 100%;
+    padding: .5rem;
+    border: none;
+    outline: none;
+}
+
+.body-3 {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+
+/* header */
+
+
+/* footer */
+
+footer {
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    background: linear-gradient(to bottom, #3670d5 0%, #210097 100%);
+    color: #fff;
+    padding: 40px 0 20px;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+footer .row {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+footer .col {
+    flex-basis: 25%;
+    padding: 5px;
+}
+
+.logo {
+    width: 200px;
+    margin-bottom: 30px;
+}
+
+footer .col h3 {
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+footer a {
+    color: #fff;
+}
+
+footer ul li {
+    list-style: none;
+    margin-bottom: 12px;
+}
+
+footer .row .col-2 h3 {
+    text-align: center;
+}
+
+footer .row .col-2 li {
+    list-style: none;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+footer .row .col-2 a:hover {
+    color: #000;
+}
+
+footer .row .col-4 {
+    text-align: center;
+}
+
+.opening-hours li {
+    text-align: center;
+}
+
+footer .information {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+}
+
+.information .far {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #000;
+    background: #fff;
+    margin-right: 15px;
+    cursor: pointer;
+    margin-bottom: 35px;
+}
+
+.social-icons .fab {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #000;
+    background: #fff;
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.color-red {
+    color: red;
+}
+
+.float-right {
+    text-align: center;
+}
+
+hr {
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    margin: 20px;
+}
+
+.copyright {
+    text-align: center;
+}
+
+
+/* footer */
