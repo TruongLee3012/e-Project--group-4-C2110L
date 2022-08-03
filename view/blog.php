@@ -1,4 +1,3 @@
-<!--
 <?php
 
 use function PHPSTORM_META\type;
@@ -7,7 +6,6 @@ require_once('../data/dbhelp.php');
 $dataList = executeResult('select * from blog');
 
 ?>
--->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +14,7 @@ $dataList = executeResult('select * from blog');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
+    <title>Home Page</title>
 
     <link rel="stylesheet" href="../css/blog.css">
 
@@ -27,8 +25,8 @@ $dataList = executeResult('select * from blog');
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-    <link rel="icon" type="image/png" href="../images/favicon/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="../images/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="reset.css">
@@ -45,20 +43,20 @@ $dataList = executeResult('select * from blog');
                 <ul>
                     <img src="../images/resources/logo-2.png">
                     <li class="active"><a href="../index.html"><i class="fa fa-home"></i>Home</a></li>
-                    <li><a href="about_us.php">About Us</a></li>
-                    <li><a href="doctors.php"><i class="fa fa-user-doctor"></i>Doctor</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li><a href="#"><i class="fa fa-user-doctor"></i>Doctor</a></li>
                     <li><a href="#"><i class="fa fa-user-check"></i>Service</a>
                         <div class="sub-menu-1">
                             <ul>
-                                <li><a href="checkup.php">Check Ups</a></li>
-                                <li><a href="dental_bridge.php">Dental Bridges</a></li>
-                                <li><a href="dental_implant.php">Dental Implants</a></li>
-                                <li><a href="filling.php">Fillings</a></li>
+                                <li><a href="checkup.html">Check Ups</a></li>
+                                <li><a href="dental_bridge.html">Dental Bridges</a></li>
+                                <li><a href="dental_implant.html">Dental Implants</a></li>
+                                <li><a href="filling.html">Fillings</a></li>
                             </ul>
                         </div>
                     </li>
-                    <li><a href="price.php"><i class="las la-file-invoice"></i>Price</a></li>
-                    <li><a href="blog.php"><i class="fa fa-blog"></i>Blog</a></li>
+                    <li><a href="view/price.html"><i class="las la-file-invoice"></i>Price</a></li>
+                    <li><a href="blog.html"><i class="fa fa-blog"></i>Blog</a></li>
                     <div>
                         <span class="las la-search"></span>
                         <input type="text" class="search" placeholder="Search">
@@ -72,52 +70,42 @@ $dataList = executeResult('select * from blog');
 
     <!-- body -->
     
-        <div class="body-3">
-            <div class="blog-main"> 
-
-                <div class="blog-table">
-                    <h2>Blog's Menu </h2>
-                    <div class="page-cotents">   
-                        <?php
-                            $index=0;
-                            foreach($dataList as $item) {
-                                echo ' 
-                                    <div class="page-line">
-                                        <a href="#'.$item['id'].'">'.$index.'.'.$item['name'].'</a>
-                                    </div>
-                                ';
-                                };
-                        ?>
-                    </div>    
+    <div class="body-3">
+        <div class="price">
+            <div class="price-items">
+                <div class="row">
+                    
+                     <?php
+                        foreach($dataList as $item) {
+                            echo '
+                                <div>
+                                    <a href="">
+                                        <div class="service-card">
+                                            <div class="row">
+                                                <div class="thumbnail col col-md-3">
+                                                    <img src="'.$item['image'].'" alt="">
+                                                </div>
+                                                <div class="card-items col col-md-9 ">
+                                                    <div class="card-title">
+                                                        <h3>'.$item['name'].'</h3>
+                                                    </div>
+                                                    <div class="card-content">  
+                                                        <div class="checkups">
+                                                            '.$item['content'].'
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            ';
+                        };
+                    ?>
                 </div>
-
-                <?php
-                    $index=0;
-                    foreach($dataList as $item) {
-                        echo ' 
-                            <div class="blog-post" id="'.$item['id'].'" >
-                                <div class="blog-title">
-                                    '.$item['name'].'
-                                </div>
-                                <div class="blog-content">
-                                    <div class="images">
-                                       <img src="'.$item['image'].'">
-                                    </div>
-                                    <div class="blog-write"> 
-                                        '.$item['content'].'
-                                    </div>
-                                </div>
-                                <div class="blog-date">
-                                    Last updated at '.$item['update_at'].'
-                                </div>
-                            </div>
-                        ';
-                    };        
-                ?>
-
             </div>
-
         </div>
+    </div>
 
 
     <!-- end body -->
@@ -133,10 +121,10 @@ $dataList = executeResult('select * from blog');
             <div class="col-2">
                 <h3>Link</h3>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="view/about_us.php">About Us</a></li>
-                <li><a href="blog.php">Blog</a></li>
+                <li><a href="view/about_us.html">About Us</a></li>
+                <li><a href="#">Blog</a></li>
                 <li><a href="#">Service</a></li>
-                <li><a href="price.php">Price</a></li>
+                <li><a href="#">Product</a></li>
             </div>
             <div class="col-4">
                 <h3>Opening Hour</h3>
