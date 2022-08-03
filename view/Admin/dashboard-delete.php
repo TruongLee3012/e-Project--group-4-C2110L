@@ -1,5 +1,4 @@
 <?php
-require_once('../../data/dbhelp.php');
 session_start();
 
 if(!isset($_SESSION['user'])) {
@@ -7,13 +6,8 @@ if(!isset($_SESSION['user'])) {
     die();
 }
 
+require_once('../../data/dbhelp.php');
 
-$email = $pwd = "";
-
-if(isset($_SESSION['user'])) {
-    $email = $_SESSION['user']['email'];
-    $pwd = $_SESSION['user']['pwd'];
-}
 
 if(!empty($_POST)) {
 	$id = $_POST['id'];

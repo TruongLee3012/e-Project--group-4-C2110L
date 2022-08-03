@@ -54,7 +54,7 @@ $fullname = $age = $email = $address = $service_content = $service = '';
                     <img src="../../images/resources/logo-2.png">
                     <li><a href="../../index.php"><i class="fa fa-home"></i>Home</a></li>
                     <li><a href="about_us.php">About Us</a></li>
-                    <li><a href="#"><i class="fa fa-user-doctor"></i>Doctor</a></li>
+                    <li><a href="doctor.php"><i class="fa fa-user-doctor"></i>Doctor</a></li>
                     <li class="active"><a href="#"><i class="fa fa-user-check"></i>Service</a>
                         <div class="sub-menu-1">
                             <ul>
@@ -72,8 +72,8 @@ $fullname = $age = $email = $address = $service_content = $service = '';
                             </ul>
                         </div>
                     </li>
-                    <li><a href="product.php"><i class="las la-shopping-cart"></i>Product</a></li>
-                    <li><a href="#"><i class="fa fa-blog"></i>Blog</a></li>
+                    <li><a href="price.php"><i class="las la-shopping-cart"></i>Product</a></li>
+                    <li><a href="blog.php"><i class="fa fa-blog"></i>Blog</a></li>
                     <div>
                         <span class="las la-search"></span>
                         <input type="text" class="search" placeholder="Search">
@@ -226,9 +226,9 @@ $fullname = $age = $email = $address = $service_content = $service = '';
                 <h3>Link</h3>
                 <li><a href="../../index.php">Home</a></li>
                 <li><a href="about_us.php">About Us</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Service</a></li>
-                <li><a href="product.php">Product</a></li>
+                <li><a href="blog.php">Blog</a></li>
+                <li><a href="checkup.php">Service</a></li>
+                <li><a href="price.php">Price</a></li>
             </div>
             <div class="col-4">
                 <h3>Opening Hour</h3>

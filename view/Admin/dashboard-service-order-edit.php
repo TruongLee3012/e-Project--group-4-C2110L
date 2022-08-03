@@ -7,13 +7,6 @@ if(!isset($_SESSION['user'])) {
     die();
 }
 
-$email = $pwd = "";
-
-if(isset($_SESSION['user'])) {
-    $email = $_SESSION['user']['email'];
-    $pwd = $_SESSION['user']['pwd'];
-}
-
 if(!empty($_POST)) {
 	$id = $_POST['id'];
 	$fullname = $_POST['fullname'];
@@ -45,8 +38,8 @@ $item = executeResult("select * from service_orders where id = $id", true);
     <title>Edit Page</title>
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="stylesheet" href="../../css/dashboard.css">
-    <link rel="icon" type="image/png" href="../images/favicon/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="../images/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="../../images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../images/favicon/favicon-16x16.png" sizes="16x16">
     
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
@@ -110,7 +103,7 @@ $item = executeResult("select * from service_orders where id = $id", true);
                 <input type="search" placeholder="Search">
             </div>
             <div class="user-wrapper">
-                <img src="../images/test-admin.jpg" width="40px" height="40px" alt="">
+                <img src="../../images/test-admin.jpg" width="40px" height="40px" alt="">
                 <div>
                     <h4>Truong Lee</h4>
                     <small>Admin</small>

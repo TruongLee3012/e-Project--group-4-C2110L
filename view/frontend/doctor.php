@@ -16,8 +16,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-    <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="../../images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../images/favicon/favicon-16x16.png" sizes="16x16">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="reset.css">
@@ -32,17 +32,17 @@
         <div class="row">
             <nav class="menu-bar">
                 <ul>
-                    <img src="../images/resources/logo-2.png">
-                    <li><a href="#"><i class="fa fa-home"></i>Home</a></li>
-                    <li><a href="view/about_us.php">About Us</a></li>
+                    <img src="../../images/resources/logo-2.png">
+                    <li><a href="../../index.php"><i class="fa fa-home"></i>Home</a></li>
+                    <li><a href="about_us.php">About Us</a></li>
                     <li class="active"><a href="#"><i class="fa fa-user-doctor"></i>Doctor</a></li>
                     <li><a href="#"><i class="fa fa-user-check"></i>Service</a>
                         <div class="sub-menu-1">
                             <ul>
-                                <li><a href="view/checkup.php">Check Ups</a></li>
-                                <li><a href="view/dental_bridge.php">Dental Bridges</a></li>
-                                <li><a href="view/dental_implant.php">Dental Implants</a></li>
-                                <li><a href="view/filling.php">Fillings</a></li>
+                                <li><a href="checkup.php">Check Ups</a></li>
+                                <li><a href="dental_bridge.php">Dental Bridges</a></li>
+                                <li><a href="dental_implant.php">Dental Implants</a></li>
+                                <li><a href="filling.php">Fillings</a></li>
                                 <!-- <li><a href="#">Treating Gum Disease</a></li>
                                 <li><a href="#">Tooth Extraction & Removal</a></li>
                                 <li><a href="#">Cosmetic Dentistry</a></li>
@@ -53,8 +53,8 @@
                             </ul>
                         </div>
                     </li>
-                    <li><a href="view/product.php"><i class="las la-shopping-cart"></i>Product</a></li>
-                    <li><a href="#"><i class="fa fa-blog"></i>Blog</a></li>
+                    <li><a href="price.php"><i class="las la-shopping-cart"></i>Price</a></li>
+                    <li><a href="blog.php"><i class="fa fa-blog"></i>Blog</a></li>
                     <div>
                         <span class="las la-search"></span>
                         <input type="text" class="search" placeholder="Search">
@@ -153,17 +153,17 @@
      <footer class="container-fluid">
         <div class="row">
             <div class="col-3">
-                <img src="images/resources/logo-2.png" sizes="32x32" class="logo">
+                <img src="../../images/resources/logo-2.png" sizes="32x32" class="logo">
                 <p>Dento was started in the year 1995 as a small private dental clinic in Binghamton, NY, USA. Looking for affordable dental care?</p>
                 <p class="bottom-text">To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain.</p>
             </div>
             <div class="col-2">
                 <h3>Link</h3>
                 <li><a href="../index.php">Home</a></li>
-                <li><a href="view/about_us.php">About Us</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Service</a></li>
-                <li><a href="view/product.php">Product</a></li>
+                <li><a href="about_us.php">About Us</a></li>
+                <li><a href="blog.php">Blog</a></li>
+                <li><a href="checkup.php">Service</a></li>
+                <li><a href="price.php">Price</a></li>
             </div>
             <div class="col-4">
                 <h3>Opening Hour</h3>

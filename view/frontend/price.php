@@ -33,7 +33,7 @@
                     <img src="../images/resources/logo-2.png">
                     <li><a href="../../index.php"><i class="fa fa-home"></i>Home</a></li>
                     <li><a href="about_us.php">About Us</a></li>
-                    <li><a href="#"><i class="fa fa-user-doctor"></i>Doctor</a></li>
+                    <li><a href="doctoc.php"><i class="fa fa-user-doctor"></i>Doctor</a></li>
                     <li><a href="#"><i class="fa fa-user-check"></i>Service</a>
                         <div class="sub-menu-1">
                             <ul>    
@@ -51,8 +51,8 @@
                             </ul>
                         </div>
                     </li>
-                    <li><a href="product.php"><i class="las la-shopping-cart"></i>Product</a></li>
-                    <li><a href="#"><i class="fa fa-blog"></i>Blog</a></li>
+                    <li class="active"><a href="price.php"><i class="las la-shopping-cart"></i>Price</a></li>
+                    <li><a href="blog.php"><i class="fa fa-blog"></i>Blog</a></li>
                     <div>
                         <span class="las la-search"></span>
                         <input type="text" class="search" placeholder="Search">
@@ -73,7 +73,7 @@
             <div class="price-items">
                 <div class="row">
                     <div>
-                        <a href="dental_bridge.html">
+                        <a href="dental_bridge.php">
                             <div class="service-card">
                                 <div class="row">
                                     <div class="thumbnail col col-md-3">
@@ -104,7 +104,7 @@
                     </div>
 
                     <div>
-                        <a href="dental_implant.html">
+                        <a href="dental_implant.php">
                             <div class="service-card">
                                 <div class="row">
                                     <div class="thumbnail col col-md-3">
@@ -135,7 +135,7 @@
                     </div>
 
                     <div>
-                        <a href="filling.html">
+                        <a href="filling.php">
                             <div class="service-card">
                                 <div class="row">
                                     <div class="thumbnail col col-md-3">

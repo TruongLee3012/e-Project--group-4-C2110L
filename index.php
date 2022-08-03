@@ -53,8 +53,8 @@
                             </ul>
                         </div>
                     </li>
-                    <li><a href="view/frontend/product.php"><i class="las la-shopping-cart"></i>Product</a></li>
-                    <li><a href="#"><i class="fa fa-blog"></i>Blog</a></li>
+                    <li><a href="view/frontend/price.php"><i class="las la-shopping-cart"></i>Price</a></li>
+                    <li><a href="view/frontend/blog.php"><i class="fa fa-blog"></i>Blog</a></li>
                     <div>
                         <span class="las la-search"></span>
                         <input type="text" class="search" placeholder="Search">
@@ -226,7 +226,7 @@
                                         <p>A check-up allows your dentist to see if you have any dental problems and helps you keep your mouth healthy</p>
                                     </div>
                                     <div class="btn btn-success">
-                                        <a href="view/frontend/Checkup.html">Read more</a>
+                                        <a href="view/frontend/Checkup.php">Read more</a>
                                     </div>
                                 </div>
                             </div>
@@ -244,7 +244,7 @@
                                         <p>If you have missing teeth, a dental bridge can help restore the look and function of your teeth. It bridges the gap where the missing tooth is.</p>
                                     </div>
                                     <div class="btn btn-success">
-                                        <a href="view/frontend/dental_bridge.html">Read more</a>
+                                        <a href="view/frontend/dental_bridge.php">Read more</a>
                                     </div>
                                 </div>
                             </div>
@@ -262,7 +262,7 @@
                                         <p>Dental implants are medical devices surgically implanted into the jaw to restore a person's ability to chew or their appearance.</p>
                                     </div>
                                     <div class="btn btn-success">
-                                        <a href="view/frontend/dental_implant.html">Read more</a>
+                                        <a href="view/frontend/dental_implant.php">Read more</a>
                                     </div>
                                 </div>
                             </div>
@@ -280,7 +280,7 @@
                                         <p>Used to treat a small hole, or cavity, in a tooth. To repair a cavity, removes the decayed tooth tissue and fills the space with a filling material.</p>
                                     </div>
                                     <div class="btn btn-success">
-                                        <a href="view/frontend/filling.html">Read more</a>
+                                        <a href="view/frontend/filling.php">Read more</a>
                                     </div>
                                 </div>
                             </div>
@@ -302,11 +302,11 @@
             </div>
             <div class="col-2">
                 <h3>Link</h3>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="view/about_us.html">About Us</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Service</a></li>
-                <li><a href="view/product.html">Product</a></li>
+                <li><a href="index.php">Home</a></li>
+                <li><a href="view/frontend/about_us.html">About Us</a></li>
+                <li><a href="view/frontend/blog.php">Blog</a></li>
+                <li><a href="view/frontend/checkup.php">Service</a></li>
+                <li><a href="view/frontend/price.php">Price</a></li>
             </div>
             <div class="col-4">
                 <h3>Opening Hour</h3>

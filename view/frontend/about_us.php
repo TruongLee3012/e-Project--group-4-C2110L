@@ -69,7 +69,7 @@
     <!-- body <-->
     </-->
     <div class="container service-content " style="margin-bottom: 25px;">
-        <h1 class="text" style="background-image: url(../../images/background.png); width: 80%;">About us</h1>
+        <h1 class="text" style="background-image: url(../../images/background.png); width: 80%;color: deepskyblue;">About us</h1>
 
     </div>
     <div class="container">
@@ -80,7 +80,7 @@
                 </div>
             </div>
             <div class="col">
-                <p style="color: #8bc43f; font-size: 28px;">About us</p>
+              <!--   <p style="color: #8bc43f; font-size: 28px;">About us</p> -->
                 <h3 class="sec-title h1">Mission and Story About Our Us</h3>
                 <p>Dento Viet Nam was started in the year of 2021 as a small private dental clinic in Le Thanh Nghi, Ha Noi, Viet Nam. Looking for affordable dental care?</p>
                 <p>To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences,
@@ -107,7 +107,7 @@
             </div>
         </div>
     </div>
-    <h2 style="text-align: center;color: deepskyblue;">Do you want to join us ?</h2>
+    <h2 style="text-align: center;color:    ;">Do you want to join us ?</h2>
     <div class="container">
 
         <div class="benefit">

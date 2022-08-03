@@ -11,24 +11,18 @@ require_once('../../data/dbhelp.php');
 $email = $pwd = $msg = "";
 
 if(!empty($_POST)) {
-    // $email = $_POST['email'];
-    $email = getPost('email');
-    // $pwd = $_POST['pwd'];
-    $pwd = getPost('pwd');
-    $pwd = getMD5Security($pwd);
+    $email = $_POST['email'];
+    $pwd = $_POST['pwd'];
 
-    // Them du lieu vao database
+
     $sql = "select * from users where email = '$email' and password = '$pwd'";
-    // echo $sql;die();
     $data = executeResult($sql, true);
-
     if($data != null) {
-        //Dang nhap thanh cong
         $_SESSION['user'] = $data;
         header('Location: dashboard.php');
         die();
     } else {
-        //Dang nhap that bai
+  
         $msg = 'Login failed';
         
     }

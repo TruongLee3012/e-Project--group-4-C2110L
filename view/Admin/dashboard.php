@@ -1,19 +1,13 @@
 <?php
+
 session_start();
 
 if(!isset($_SESSION['user'])) {
     header('Location: login.php');
     die();
 }
-
 require_once('../../data/dbhelp.php');
 
-$email = $pwd = "";
-
-if(isset($_SESSION['user'])) {
-    $email = $_SESSION['user']['email'];
-    $pwd = $_SESSION['user']['pwd'];
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,8 +19,8 @@ if(isset($_SESSION['user'])) {
     <title>Dashboard</title>
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="stylesheet" href="../../css/dashboard.css">
-    <link rel="icon" type="image/png" href="../images/favicon/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="../images/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="../../images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../images/favicon/favicon-16x16.png" sizes="16x16">
 </head>
 
 <body>
@@ -74,7 +68,7 @@ if(isset($_SESSION['user'])) {
                 <input type="search" placeholder="Search">
             </div>
             <div class="user-wrapper">
-                <img src="../images/test-admin.jpg" width="40px" height="40px" alt="">
+                <img src="../../images/test-admin.jpg" width="40px" height="40px" alt="">
                 <div>
                     <h4>Truong Lee</h4>
                     <small>Admin</small>

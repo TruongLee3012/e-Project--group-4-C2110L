@@ -5,16 +5,8 @@ if(!isset($_SESSION['user'])) {
     header('Location: login.php');
     die();
 }
-
 require_once('../../data/dbhelp.php');
 
-$email = $pwd = "";
-
-if(isset($_SESSION['user'])) {
-    $email = $_SESSION['user']['email'];
-    $pwd = $_SESSION['user']['pwd'];
-}
-use function PHPSTORM_META\type;
 
 
 $dataList = executeResult('select * from blog');
@@ -31,10 +23,17 @@ $dataList = executeResult('select * from blog');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>List Page</title>
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-    <link rel="stylesheet" href="../css/dashboard.css">
-    <link rel="icon" type="image/png" href="../images/favicon/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="../images/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="stylesheet" href="../../css/dashboard.css">
+    <link rel="icon" type="image/png" href="../../images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../images/favicon/favicon-16x16.png" sizes="16x16">
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <script src="https://kit.fontawesome.com/d953ad999c.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
 </head>
 
 <body>
@@ -86,7 +85,7 @@ $dataList = executeResult('select * from blog');
                 <input type="search" placeholder="Search">
             </div>
             <div class="user-wrapper">
-                <img src="../images/test-admin.jpg" width="40px" height="40px" alt="">
+                <img src="../../images/test-admin.jpg" width="40px" height="40px" alt="">
                 <div>
                     <h4>Truong Lee</h4>
                     <small>Admin</small>
@@ -95,18 +94,17 @@ $dataList = executeResult('select * from blog');
         </header>
 
         <main>
-            <div class="cards">
-                <a href="dashboard-add.php"><button>Add Blog</button></a>
-                    <table border="1" style="width: 100%">
+            <div class="container table-responsive-sm">
+                    <table border="1">
                         <thead>
-                            <tr>
-                                <th>No</th>
-                                <th>Title</th>
-                                <th>Thumbnail</th>
-                                <th>Content</th>
-                                <th>Update At</th>
-                                <th></th>
-                                <th></th>
+                            <tr class="table-primary"  style="text-align: center;">
+                                <th style="width:30px">No</th>
+                                <th style="width:250px">Title</th>
+                                <th style="width:400px">Thumbnail</th>
+                                <th style="width:300px">Content</th>
+                                <th style="width: 200px">Update At</th>
+                                <th style="width: 100px"></th>
+                                <th style="width: 100px"></th>
                             </tr>
                         </thead>
                         <tbody>
