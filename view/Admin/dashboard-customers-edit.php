@@ -12,19 +12,20 @@ if(!empty($_POST)) {
 	$fullname = $_POST['fullname'];
 	$email = $_POST['email'];
     $phone = $_POST['phone'];
+    $address = $_POST['address'];
     $service = $_POST['service'];
-    $content = $_POST['content'];
+    $symptom = $_POST['symptom'];
        
 
-	$sql = "update service_orders set fullname = '$fullname', phone = '$phone', email = '$email', service = '$service',content = '$content' where id = $id";
+	$sql = "update customers set fullname = '$fullname', birthday = '$birthday',phone = '$phone', email = '$email', address = '$address',service = '$service',symptom = '$symptom' where id = $id";
 	execute($sql);
 
-    header('Location: dashboard-service-order.php');
+    header('Location: dashboard-customers.php');
 	die();
 }
 
 $id = $_GET['id'];
-$item = executeResult("select * from service_orders where id = $id", true);
+$item = executeResult("select * from customers where id = $id", true);
 ?>
 
 <!DOCTYPE html>
@@ -61,17 +62,17 @@ $item = executeResult("select * from service_orders where id = $id", true);
             <h2><span class="las la-tooth"></span><span>Dento</span></h2>
         </div>
         <div class="sidebar-menu">
-            <ul>
+           <ul>
                 <li class="not-hover">
                     <a href="dashboard.php" ><span class="las la-igloo"></span>
                     <span>Dashboard</span></a>
                 </li>
                  <li>
-                    <a href="dashboard-customers.php"><span class="las la-users-cog"></span>
+                    <a href="dashboard-customers.php" class="active"><span class="las la-users-cog"></span>
                     <span>Customer</span></a>
                 </li>
                 <li>
-                    <a href="dashboard-service-order.php" class="active" ><span class="las la-shopping-bag"></span>
+                    <a href="dashboard-service-order.php" ><span class="las la-shopping-bag"></span>
                     <span>Service order</span></a>
                 </li>
                 <li>
@@ -79,7 +80,7 @@ $item = executeResult("select * from service_orders where id = $id", true);
                     <span>Doctor</span></a>
                 </li>
                 <li>
-                    <a href="dashboard-blog.php"><span class="las la-clipboard-list"></span>
+                    <a href="dashboard-blog.php" ><span class="las la-clipboard-list"></span>
                     <span>List Blog</span></a>
                 </li>
                 
@@ -122,14 +123,17 @@ $item = executeResult("select * from service_orders where id = $id", true);
                     </div>
 
                     <div class="form-group">
-                        <label>Email</label>
-                        <input type="email" name="email" class="form-control" value="<?=$item['email']?>">
+                        <label>Birthday:</label>
+                        <input type="date" name="birthday" class="form-control" value="<?=$item['birthday']?>">
                     </div>
                     <div class="form-group">
                         <label>Phone:</label>
                         <input type="number" name="phone" class="form-control" value="<?=$item['phone']?>">
                     </div>
-                   
+                    <div class="form-group">
+                        <label>Address:</label>
+                        <input  type="text" name="address" class="form-control" value="<?=$item['address']?>">
+                    </div>
                     <div class="form-group">
                         <label>Services:</label>
                         <select class="form-control"  name="service" > 
@@ -143,13 +147,12 @@ $item = executeResult("select * from service_orders where id = $id", true);
 
 
                     <div class="form-group">
-                        <label>Content:</label>
-                        <textarea class="form-control" name="content" rows="5"><?=$item['content']?></textarea>
+                        <label>Symptom:</label>
+                        <textarea class="form-control" name="symptom" rows="5"><?=$item['symptom']?></textarea>
                     </div>
-                      <p><a href="dashboard-service-order.php">Back to list</a></p>
+                      <p><a href="dashboard-customers.php">Back to list</a></p>
                     <div class="form-group">
                         <button class="btn btn-success">Update</button>
-                    </div>
 
 
                 </form>

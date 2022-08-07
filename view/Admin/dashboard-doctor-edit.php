@@ -1,5 +1,5 @@
 <?php
-require_once('../../data/dbhelp.php');
+
 session_start();
 
 if(!isset($_SESSION['user'])) {
@@ -7,24 +7,30 @@ if(!isset($_SESSION['user'])) {
     die();
 }
 
+require_once('../../data/dbhelp.php');
+
+
+
 if(!empty($_POST)) {
-	$id = $_POST['id'];
-	$fullname = $_POST['fullname'];
-	$email = $_POST['email'];
+    $id = $_POST['id'];
+    $fullname = $_POST['fullname'];
+    $position = $_POST['position'];
+    $infomation = $_POST['infomation'];
+    $qualification = $_POST['qualification'];
     $phone = $_POST['phone'];
-    $service = $_POST['service'];
-    $content = $_POST['content'];
-       
+    $email = $_POST['email'];
+    $image = $_POST['image'];
+    // $update_at = $create_at = date('Y-m-d H:i:s');
 
-	$sql = "update service_orders set fullname = '$fullname', phone = '$phone', email = '$email', service = '$service',content = '$content' where id = $id";
-	execute($sql);
+    $sql = "update doctor set fullname = '$fullname',position = '$position', infomation = '$infomation', qualification = '$qualification',phone = '$phone',email = '$email', image = '$image' where id = $id";
+    execute($sql);
 
-    header('Location: dashboard-service-order.php');
-	die();
+    header('Location: dashboard-doctor.php');
+    die();
 }
 
 $id = $_GET['id'];
-$item = executeResult("select * from service_orders where id = $id", true);
+$item = executeResult("select * from doctor where id = $id", true);
 ?>
 
 <!DOCTYPE html>
@@ -40,7 +46,7 @@ $item = executeResult("select * from service_orders where id = $id", true);
     <link rel="icon" type="image/png" href="../../images/favicon/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="../../images/favicon/favicon-16x16.png" sizes="16x16">
     
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
 
     <script src="https://kit.fontawesome.com/d953ad999c.js"></script>
@@ -71,11 +77,11 @@ $item = executeResult("select * from service_orders where id = $id", true);
                     <span>Customer</span></a>
                 </li>
                 <li>
-                    <a href="dashboard-service-order.php" class="active" ><span class="las la-shopping-bag"></span>
+                    <a href="dashboard-service-order.php" ><span class="las la-shopping-bag"></span>
                     <span>Service order</span></a>
                 </li>
                 <li>
-                    <a href="dashboard-doctor.php" ><span class="las la-users-cog"></span>
+                    <a href="dashboard-doctor.php" class="active" ><span class="las la-users-cog"></span>
                     <span>Doctor</span></a>
                 </li>
                 <li>
@@ -113,50 +119,58 @@ $item = executeResult("select * from service_orders where id = $id", true);
         </header>
 
         <main>
-            <div class="container">
+            <div class="container table-responsive-sm">
                 <form method="post">
-                        <input type="hidden" name="id" value="<?=$id?>">
-                        <div class="form-group">
-                        <label>Full name:</label>
-                        <input type="text" name="fullname" class="form-control" value="<?=$item['fullname']?>">
-                    </div>
-
                     <div class="form-group">
-                        <label>Email</label>
-                        <input type="email" name="email" class="form-control" value="<?=$item['email']?>">
+                        <label>Fullname: </label>
+                        <input type="hidden" name="id" value="<?=$id?>">
+                        <input type="text" name="fullname" placeholder="Enter fullname" value="<?=$item['fullname']?>">
+                    </div>
+                    <div class="form-group">
+                        <label>Postion</label>
+                        <select class="form-control" name="position" value="<?=$item['position']?>">
+                            <option>Select</option>
+                            <option>Dentist</option>
+                            <option>Orthodontist</option>
+                            <option>Dental Clinic</option>
+                            <option>Assistant</option>
+                            <option>Hygienist</option>
+                            <option>Nurse</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Infomation:</label>
+                        <input type="text"  name="infomation" placeholder="Enter information" value="<?=$item['infomation']?>">
+                    </div>
+                    <div class="form-group">
+                        <label>Qualification:</label>
+                        <input type="text"  name="qualification" placeholder="Enter information" value="<?=$item['qualification']?>">
                     </div>
                     <div class="form-group">
                         <label>Phone:</label>
-                        <input type="number" name="phone" class="form-control" value="<?=$item['phone']?>">
+                        <input type="number"  name="phone" placeholder="Enter information" value="<?=$item['phone']?>">
                     </div>
-                   
                     <div class="form-group">
-                        <label>Services:</label>
-                        <select class="form-control"  name="service" > 
-                            <option <?=$item['service']?>>Select</option>
-                            <option <?=$item['service']?>>Check Up</option>
-                            <option <?=$item['service']?>>Dental Bridge</option>
-                            <option <?=$item['service']?>>Dental Implant</option>
-                            <option <?=$item['service']?>>Filling</option> 
-                    </select>
+                        <label>Email:</label>
+                        <input type="email"  name="email" placeholder="Enter information" value="<?=$item['email']?>">
                     </div>
-
-
-                    <div class="form-group">
-                        <label>Content:</label>
-                        <textarea class="form-control" name="content" rows="5"><?=$item['content']?></textarea>
+                     <div class="form-group">
+                        <label>Image:</label>
+                        <input type="text"  name="image" placeholder="Enter information" value="<?=$item['image']?>">
                     </div>
-                      <p><a href="dashboard-service-order.php">Back to list</a></p>
+                      <p><a href="dashboard-doctor.php">Back to list</a></p>
                     <div class="form-group">
                         <button class="btn btn-success">Update</button>
                     </div>
-
-
                 </form>
             </div>
         </main>
     </div>
-
+<style type="text/css">
+    .table-responsive-sm p{
+        padding-bottom: 5px;
+    }
+</style>
 </body>
 
 </html>

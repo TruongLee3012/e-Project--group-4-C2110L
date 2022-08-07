@@ -26,11 +26,15 @@ $dataList = executeResult('select * from blog');
     <link rel="stylesheet" href="../../css/dashboard.css">
     <link rel="icon" type="image/png" href="../../images/favicon/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="../../images/favicon/favicon-16x16.png" sizes="16x16">
-    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
 
     <script src="https://kit.fontawesome.com/d953ad999c.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+ 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="reset.css">
@@ -45,27 +49,29 @@ $dataList = executeResult('select * from blog');
         </div>
         <div class="sidebar-menu">
             <ul>
-                <li>
-                    <a href="dashboard.php"><span class="las la-igloo"></span>
+                <li class="not-hover">
+                    <a href="dashboard.php" ><span class="las la-igloo"></span>
                     <span>Dashboard</span></a>
                 </li>
-                <li>
-                    <a href="dashboard-add.php"><span class="las la-plus-circle"></span>
-                    <span>Add</span></a>
-                </li>
-                <li class="not-hover">
-                    <a href="dashboard-list.php" class="active"><span class="las la-clipboard-list"></span>
-                    <span>List</span></a>
+                 <li>
+                    <a href="dashboard-customers.php"><span class="las la-users-cog"></span>
+                    <span>Customer</span></a>
                 </li>
                 <li>
-                    <a href="dashboard-service-order.php"><span class="las la-shopping-bag"></span>
+                    <a href="dashboard-service-order.php" ><span class="las la-shopping-bag"></span>
                     <span>Service order</span></a>
                 </li>
                 <li>
-                    <a href="dashboard-account.php"><span class="las la-users-cog"></span>
-                    <span>Account</span></a>
+                    <a href="dashboard-doctor.php" ><span class="las la-users-cog"></span>
+                    <span>Doctor</span></a>
                 </li>
                 <li>
+                    <a href="dashboard-blog.php" class="active" ><span class="las la-clipboard-list"></span>
+                    <span>List Blog</span></a>
+                </li>
+                
+               
+                 <li>
                     <a href="logout.php"><span class="las la-sign-out-alt"></span>
                     <span>Log out</span></a>
                 </li>
@@ -94,17 +100,20 @@ $dataList = executeResult('select * from blog');
         </header>
 
         <main>
+            <div class="container" style="margin-bottom: 20px">
+                <a href="dashboard-blog-add.php"><button class="btn btn-primary">Add</button></a>
+            </div> 
             <div class="container table-responsive-sm">
-                    <table border="1">
+                    <table class="table table-bordered">
                         <thead>
                             <tr class="table-primary"  style="text-align: center;">
                                 <th style="width:30px">No</th>
                                 <th style="width:250px">Title</th>
-                                <th style="width:400px">Thumbnail</th>
-                                <th style="width:300px">Content</th>
+                                <th style="width:300px">Thumbnail</th>
+                                <th style="width:350px">Content</th>
                                 <th style="width: 200px">Update At</th>
-                                <th style="width: 100px"></th>
-                                <th style="width: 100px"></th>
+                                <th style="width: 50px"></th>
+                                <th></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -118,48 +127,33 @@ $dataList = executeResult('select * from blog');
                             <td>'.$item['content'].'</td>
                             <td>'.$item['update_at'].'</td>
                             <td>
-                                <a href="dashboard-edit.php?id='.$item['id'].'"><button>Edit</button></a>
+                                <a href="dashboard-blog-edit.php?id='.$item['id'].'"><button class="btn btn-warning">Edit</button></a>
                             </td>
-                            <td>
-                               <button type="button" name="button" onclick = "deleteblog('.$item['id'].');">Delete</button>
-                            </td>
+                            
+                            <td><a onclick="submit('.$item['id'].');"><button class="btn btn-danger">Delete</button></a></td>
                         </tr>';
+
+                         
+                   
                 }
                 ?>
                         </tbody>
                     </table>
                 </div>
-            </main>
-            <script type="text/javascript">
-            // Function
-            function deleteblog(id){
-                $(document).ready(function(){
-                $.ajax({
-                    // Action
-                    url: 'delete.php',
-                    // Method
-                    type: 'POST',
-                    data: {
-                    // Get value
-                    id: id,
-                    action: "delete"
-                    },
-                    success:function(response){
-                    // Response is the output of action file
-                    if(response == 0){
-                        alert("Data Deleted Successfully");
-                        document.getElementById(id).style.display = "none";
-                    }
-                    else if(response == 1){
-                        alert("Data Cannot Be Deleted");
-                    }
-                    }
-                });
-                });
-            }
-            </script>
-    </div>
+            
+        </main>
+        
 
 </body>
-
+<script type="text/javascript">
+    // Function
+    function submit(id) {
+        let text;
+        if (confirm("Do you want to delete ?") == true) {
+          window.location.replace("dashboard-blog-delete.php?id="+id);
+        } 
+     
+      }
+                
+</script>
 </html>

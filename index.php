@@ -303,7 +303,7 @@
             <div class="col-2">
                 <h3>Link</h3>
                 <li><a href="index.php">Home</a></li>
-                <li><a href="view/frontend/about_us.html">About Us</a></li>
+                <li><a href="view/frontend/about_us.php">About Us</a></li>
                 <li><a href="view/frontend/blog.php">Blog</a></li>
                 <li><a href="view/frontend/checkup.php">Service</a></li>
                 <li><a href="view/frontend/price.php">Price</a></li>

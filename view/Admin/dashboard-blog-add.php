@@ -1,5 +1,4 @@
 <?php
-require_once('../../data/dbhelp.php');
 session_start();
 
 if(!isset($_SESSION['user'])) {
@@ -7,24 +6,21 @@ if(!isset($_SESSION['user'])) {
     die();
 }
 
+require_once('../../data/dbhelp.php');
+
+
 if(!empty($_POST)) {
-	$id = $_POST['id'];
-	$fullname = $_POST['fullname'];
-	$email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $service = $_POST['service'];
+   
+
+    $name = $_POST['name'];
+    $image = $_POST['image'];
     $content = $_POST['content'];
-       
+    $update_at = $create_at = date('Y-m-d H:i:s');
 
-	$sql = "update service_orders set fullname = '$fullname', phone = '$phone', email = '$email', service = '$service',content = '$content' where id = $id";
-	execute($sql);
-
-    header('Location: dashboard-service-order.php');
-	die();
+    $sql = "insert into blog(name, image, content, create_at, update_at) values ('$name', '$image', '$content', '$create_at', '$update_at')";
+    execute($sql);
+    header('Location:dashboard-blog.php');
 }
-
-$id = $_GET['id'];
-$item = executeResult("select * from service_orders where id = $id", true);
 ?>
 
 <!DOCTYPE html>
@@ -34,13 +30,12 @@ $item = executeResult("select * from service_orders where id = $id", true);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Page</title>
+    <title>Add Page</title>
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-    <link rel="stylesheet" href="../../css/dashboard.css">
+    <link rel="stylesheet" href="../../css/dashboard-account.css">
     <link rel="icon" type="image/png" href="../../images/favicon/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="../../images/favicon/favicon-16x16.png" sizes="16x16">
-    
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
 
     <script src="https://kit.fontawesome.com/d953ad999c.js"></script>
@@ -61,7 +56,7 @@ $item = executeResult("select * from service_orders where id = $id", true);
             <h2><span class="las la-tooth"></span><span>Dento</span></h2>
         </div>
         <div class="sidebar-menu">
-            <ul>
+           <ul>
                 <li class="not-hover">
                     <a href="dashboard.php" ><span class="las la-igloo"></span>
                     <span>Dashboard</span></a>
@@ -71,7 +66,7 @@ $item = executeResult("select * from service_orders where id = $id", true);
                     <span>Customer</span></a>
                 </li>
                 <li>
-                    <a href="dashboard-service-order.php" class="active" ><span class="las la-shopping-bag"></span>
+                    <a href="dashboard-service-order.php" ><span class="las la-shopping-bag"></span>
                     <span>Service order</span></a>
                 </li>
                 <li>
@@ -79,7 +74,7 @@ $item = executeResult("select * from service_orders where id = $id", true);
                     <span>Doctor</span></a>
                 </li>
                 <li>
-                    <a href="dashboard-blog.php"><span class="las la-clipboard-list"></span>
+                    <a href="dashboard-blog.php" class="active" ><span class="las la-clipboard-list"></span>
                     <span>List Blog</span></a>
                 </li>
                 
@@ -113,50 +108,41 @@ $item = executeResult("select * from service_orders where id = $id", true);
         </header>
 
         <main>
-            <div class="container">
+            <div class="container table-responsive-sm">
                 <form method="post">
-                        <input type="hidden" name="id" value="<?=$id?>">
-                        <div class="form-group">
-                        <label>Full name:</label>
-                        <input type="text" name="fullname" class="form-control" value="<?=$item['fullname']?>">
+                    <div class="form-group">
+                     <label>Title:</label>
+                    <input type="text" style="width: 96%" name="name" placeholder="Enter title" class="form-control">
                     </div>
+                    <div class="form-group">
+                    <label>Thumbnail: </label>
+                    <input type="text" style="width: 96%" name="image" placeholder="Enter thumbnail" class="form-control">
+                    </div>
+                    <div class="form-group">
+                    <label>Price: </label>
+                    <input type="number" style="width: 96%" name="price" placeholder="Enter price" class="form-control">
+                    </div>
+                    <div class="form-group">
+                    <label>Content: </label>
+                    <textarea rows="5" style="width: 96%" name="content" class="form-control"></textarea>
+                    </div>
+                    
+                    
+                     <a href="dashboard-blog.php" ><p style="margin-top: 20px;">Back to blog list</p></a>
 
                     <div class="form-group">
-                        <label>Email</label>
-                        <input type="email" name="email" class="form-control" value="<?=$item['email']?>">
+                        <button class="btn btn-success">Add</button>
                     </div>
-                    <div class="form-group">
-                        <label>Phone:</label>
-                        <input type="number" name="phone" class="form-control" value="<?=$item['phone']?>">
-                    </div>
-                   
-                    <div class="form-group">
-                        <label>Services:</label>
-                        <select class="form-control"  name="service" > 
-                            <option <?=$item['service']?>>Select</option>
-                            <option <?=$item['service']?>>Check Up</option>
-                            <option <?=$item['service']?>>Dental Bridge</option>
-                            <option <?=$item['service']?>>Dental Implant</option>
-                            <option <?=$item['service']?>>Filling</option> 
-                    </select>
-                    </div>
-
-
-                    <div class="form-group">
-                        <label>Content:</label>
-                        <textarea class="form-control" name="content" rows="5"><?=$item['content']?></textarea>
-                    </div>
-                      <p><a href="dashboard-service-order.php">Back to list</a></p>
-                    <div class="form-group">
-                        <button class="btn btn-success">Update</button>
-                    </div>
-
 
                 </form>
             </div>
         </main>
     </div>
-
+    <style type="text/css">
+    .table-responsive-sm p{
+        padding-bottom: 5px;
+    }
+</style>
 </body>
 
 </html>

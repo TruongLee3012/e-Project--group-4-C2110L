@@ -3,7 +3,7 @@ create table if not exists users (
 	fullname varchar(50),
 	email varchar(150),
     address varchar(200),
-    phone varchar(11),
+    phone int,
     password varchar(30),
     create_at datetime,
     update_at datetime
@@ -12,11 +12,12 @@ create table if not exists users (
 create table if not exists doctor(
     id int primary key auto_increment,
     user_id int references users(id),
+    position varchar(50),
     fullname varchar(50),
-    address varchar(200),
-    phone varchar(11),
-    specialized varchar(50),
-    comment varchar(200),
+    infomation varchar(200),
+    qualification varchar(200),
+    phone varchar(15),
+    email varchar(50),
     image varchar(200),
     create_at datetime,
     update_at datetime
@@ -38,9 +39,9 @@ create table if not exists service_orders(
     user_id int references users(id),
     service_id int references service(id),
     fullname varchar(50),
-    birth datetime,
+    
     email varchar(250),
-    address varchar(200),
+    phone int,
     service varchar(200),
     content varchar(400),
     create_at datetime,
@@ -57,3 +58,15 @@ create table if not exists blog(
     update_at datetime
 )
 
+create table if not exists customers (
+    id int primary key auto_increment,
+    fullname varchar(50),
+    birthday datetime,
+    phone int,
+    email varchar(150),
+    address varchar(200),
+    service varchar(50),
+    symptom varchar(400),
+    create_at datetime,
+    update_at datetime
+)

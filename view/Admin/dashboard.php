@@ -21,6 +21,17 @@ require_once('../../data/dbhelp.php');
     <link rel="stylesheet" href="../../css/dashboard.css">
     <link rel="icon" type="image/png" href="../../images/favicon/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="../../images/favicon/favicon-16x16.png" sizes="16x16">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+
+    <script src="https://kit.fontawesome.com/d953ad999c.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+ 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
 </head>
 
 <body>
@@ -36,22 +47,24 @@ require_once('../../data/dbhelp.php');
                     <a href="dashboard.php" class="active"><span class="las la-igloo"></span>
                     <span>Dashboard</span></a>
                 </li>
-                <li>
-                    <a href="dashboard-add.php"><span class="las la-plus-circle"></span>
-                    <span>Add</span></a>
+                 <li>
+                    <a href="dashboard-customers.php"><span class="las la-users-cog"></span>
+                    <span>Customer</span></a>
                 </li>
                 <li>
-                    <a href="dashboard-list.php"><span class="las la-clipboard-list"></span>
-                    <span>List</span></a>
-                </li>
-                <li>
-                    <a href="dashboard-service-order.php"><span class="las la-shopping-bag"></span>
+                    <a href="dashboard-service-order.php" ><span class="las la-shopping-bag"></span>
                     <span>Service order</span></a>
                 </li>
                 <li>
-                    <a href="dashboard-account.php"><span class="las la-users-cog"></span>
-                    <span>Account</span></a>
+                    <a href="dashboard-doctor.php" ><span class="las la-users-cog"></span>
+                    <span>Doctor</span></a>
                 </li>
+                <li>
+                    <a href="dashboard-blog.php"><span class="las la-clipboard-list"></span>
+                    <span>List Blog</span></a>
+                </li>
+                
+               
                  <li>
                     <a href="logout.php"><span class="las la-sign-out-alt"></span>
                     <span>Log out</span></a>

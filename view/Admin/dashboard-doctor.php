@@ -1,5 +1,5 @@
-<?php
-require_once('../../data/dbhelp.php');
+
+<?php 
 session_start();
 
 if(!isset($_SESSION['user'])) {
@@ -7,25 +7,16 @@ if(!isset($_SESSION['user'])) {
     die();
 }
 
-if(!empty($_POST)) {
-	$id = $_POST['id'];
-	$fullname = $_POST['fullname'];
-	$email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $service = $_POST['service'];
-    $content = $_POST['content'];
-       
+require_once('../../data/dbhelp.php');
 
-	$sql = "update service_orders set fullname = '$fullname', phone = '$phone', email = '$email', service = '$service',content = '$content' where id = $id";
-	execute($sql);
 
-    header('Location: dashboard-service-order.php');
-	die();
-}
 
-$id = $_GET['id'];
-$item = executeResult("select * from service_orders where id = $id", true);
-?>
+
+ $sql="select * from doctor";
+        $list = executeResult($sql);
+
+ ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -34,13 +25,14 @@ $item = executeResult("select * from service_orders where id = $id", true);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Page</title>
+    <title>Service order Page</title>
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="stylesheet" href="../../css/dashboard.css">
     <link rel="icon" type="image/png" href="../../images/favicon/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="../../images/favicon/favicon-16x16.png" sizes="16x16">
-    
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
 
     <script src="https://kit.fontawesome.com/d953ad999c.js"></script>
@@ -71,11 +63,11 @@ $item = executeResult("select * from service_orders where id = $id", true);
                     <span>Customer</span></a>
                 </li>
                 <li>
-                    <a href="dashboard-service-order.php" class="active" ><span class="las la-shopping-bag"></span>
+                    <a href="dashboard-service-order.php" ><span class="las la-shopping-bag"></span>
                     <span>Service order</span></a>
                 </li>
                 <li>
-                    <a href="dashboard-doctor.php" ><span class="las la-users-cog"></span>
+                    <a href="dashboard-doctor.php" class="active" ><span class="las la-users-cog"></span>
                     <span>Doctor</span></a>
                 </li>
                 <li>
@@ -113,50 +105,70 @@ $item = executeResult("select * from service_orders where id = $id", true);
         </header>
 
         <main>
-            <div class="container">
-                <form method="post">
-                        <input type="hidden" name="id" value="<?=$id?>">
-                        <div class="form-group">
-                        <label>Full name:</label>
-                        <input type="text" name="fullname" class="form-control" value="<?=$item['fullname']?>">
-                    </div>
+  
+        <div>
+            <div class="container" style="margin-bottom: 20px">
+                <a href="dashboard-doctor-add.php"><button class="btn btn-primary">Add</button></a>
+            </div> 
+        <div class="container">
+            <table  class="table table-bordered">
+            <thead>
+                <tr class="table-primary"  style="text-align: center;">
+                    <th style="width:30px">No</th>
+                    <th style="width:175px">Fullname</th>
+                    <th style="width:175px">Position</th>
+                    <th style="width:300px">Information</th>
+                    <th style="width:240px">Qualification</th>
+                        
+                    <th style="width:175px">Phone</th>
+                    <th style="width:200px">Email</th>
+                    <th style="width:150px">Image</th>
+                    <th style="width: 50px"></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
 
-                    <div class="form-group">
-                        <label>Email</label>
-                        <input type="email" name="email" class="form-control" value="<?=$item['email']?>">
-                    </div>
-                    <div class="form-group">
-                        <label>Phone:</label>
-                        <input type="number" name="phone" class="form-control" value="<?=$item['phone']?>">
-                    </div>
-                   
-                    <div class="form-group">
-                        <label>Services:</label>
-                        <select class="form-control"  name="service" > 
-                            <option <?=$item['service']?>>Select</option>
-                            <option <?=$item['service']?>>Check Up</option>
-                            <option <?=$item['service']?>>Dental Bridge</option>
-                            <option <?=$item['service']?>>Dental Implant</option>
-                            <option <?=$item['service']?>>Filling</option> 
-                    </select>
-                    </div>
+                <?php
+                $index = 0;
+                foreach ($list as $item) {
+                    echo "<tr>
+                        <td >".++$index."</td>
+                        <td>".$item['fullname']."</td>
+                        <td>".$item['position']."</td>
+                        <td>".$item['infomation']."</td> 
+                        <td>".$item['qualification']."</td>
+                        
+                        <td>".$item['phone']."</td>
+                        <td>".$item['email']."</td>
+                        <td><img src=".$item['image']."></td>
 
-
-                    <div class="form-group">
-                        <label>Content:</label>
-                        <textarea class="form-control" name="content" rows="5"><?=$item['content']?></textarea>
-                    </div>
-                      <p><a href="dashboard-service-order.php">Back to list</a></p>
-                    <div class="form-group">
-                        <button class="btn btn-success">Update</button>
-                    </div>
-
-
-                </form>
-            </div>
+                        
+                        <td><a href='dashboard-doctor-edit.php?id=".$item['id']."'><button class='btn btn-warning'>Edit</button></a></td>
+                        <td><a onclick='submit(".$item['id'].")'><button class='btn btn-danger'>Delete</button></a></td>
+                        </tr>";
+                }
+                ?>
+                
+            </tbody>
+            </table>
+        </div>
+    
+        </div>
         </main>
     </div>
 
 </body>
+<script type="text/javascript">
+    
+  function submit(id) {
+    let text;
+    if (confirm("Do you want to delete ?") == true) {
+      window.location.replace("dashboard-doctor-delete.php?id="+id);
+    } 
+ 
+  }
+ 
+</script>
 
 </html>

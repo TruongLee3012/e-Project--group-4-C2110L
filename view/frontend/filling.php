@@ -3,17 +3,17 @@
 require_once('../../data/dbhelp.php');
 $fullname = $age = $email = $address = $service_content = $service = '';
     if (!empty($_POST)) {
-        $fullname = $_POST['fullname'];
-        $birth = $_POST['birth'];
+        $fullname = $_POST['fullname'];       
         $email = $_POST['email'];
-        $address = $_POST['address'];
+        $phone = $_POST['phone'];
+        
         $service = $_POST['service'];
         $content = $_POST['content'];
        
       
-        $sql = "insert into service_orders(Fullname,Birth,Email,Address,Service,Content) values ('$fullname','$birth','$email','$address','$service','$content')";
+        $sql = "insert into service_orders(Fullname,Email,Phone,Service,Content) values ('$fullname','$email','$phone','$service','$content')";
         execute($sql);
-        header('Location: product.php');
+        header('Location: price.php');
     }
 
  ?>
@@ -175,19 +175,16 @@ $fullname = $age = $email = $address = $service_content = $service = '';
                         <label>Full name:</label>
                         <input required="true" type="text" name="fullname" class="form-control" >
                     </div>
-
-                    <div class="form-group">
-                        <label>Birth</label>
-                        <input required="true" type="date" name="birth" class="form-control" >
-                    </div>
-                    <div class="form-group">
+                <div class="form-group">
                         <label>Email:</label>
-                        <input required="true" type="text" name="email" class="form-control" >
+                        <input required="true" type="email" name="email" class="form-control" >
                     </div>
                     <div class="form-group">
-                        <label>Address:</label>
-                        <input required="true" type="text" name="address" class="form-control" >
+                        <label>Phone Number:</label>
+                        <input required="true" type="number" name="phone" class="form-control" >
                     </div>
+                    
+                   
                     <div class="form-group">
                         <label>Services:</label>
                         <select class="form-control"  name="service">   
@@ -200,7 +197,7 @@ $fullname = $age = $email = $address = $service_content = $service = '';
                     </div>
                     <div class="form-group">
                         <label>Content:</label>
-                        <textarea class="form-control" name="content" rows="5"></textarea>
+                        <textarea class="form-control" name="content" rows="5" required="true"></textarea>
                     </div>
                     
                     <div class="form-group">

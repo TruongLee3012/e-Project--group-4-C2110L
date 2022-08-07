@@ -43,6 +43,7 @@ body {
 .img-holder{
     display: flex;
     justify-content: center;
+    padding-left: 0px !important;
 }
 .doctor-arena{
     margin-bottom: 30px;

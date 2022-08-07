@@ -54,26 +54,28 @@ require_once('../../data/dbhelp.php');
         </div>
         <div class="sidebar-menu">
             <ul>
-                <li>
-                    <a href="dashboard.php"><span class="las la-igloo"></span>
+                <li class="not-hover">
+                    <a href="dashboard.php" ><span class="las la-igloo"></span>
                     <span>Dashboard</span></a>
                 </li>
-                <li>
-                    <a href="dashboard-add.php"><span class="las la-plus-circle"></span>
-                    <span>Add</span></a>
+                 <li>
+                    <a href="dashboard-customers.php"><span class="las la-users-cog"></span>
+                    <span>Customer</span></a>
                 </li>
                 <li>
-                    <a href="dashboard-list.php"><span class="las la-clipboard-list"></span>
-                    <span>List</span></a>
-                </li>
-                <li class="not-hover">
                     <a href="dashboard-service-order.php" class="active"><span class="las la-shopping-bag"></span>
                     <span>Service order</span></a>
                 </li>
                 <li>
-                    <a href="dashboard-account.php"><span class="las la-users-cog"></span>
-                    <span>Account</span></a>
+                    <a href="dashboard-doctor.php"><span class="las la-users-cog"></span>
+                    <span>Doctor</span></a>
                 </li>
+                <li>
+                    <a href="dashboard-blog.php"><span class="las la-clipboard-list"></span>
+                    <span>List Blog</span></a>
+                </li>
+                
+               
                  <li>
                     <a href="logout.php"><span class="las la-sign-out-alt"></span>
                     <span>Log out</span></a>
@@ -109,14 +111,14 @@ require_once('../../data/dbhelp.php');
         <thead>
             <tr class="table-primary"  style="text-align: center;">
                 <th style="width:30px">No</th>
-                <th style="width:150px">Fullname</th>
-                <th style="width:200px">Birthday</th>
+                <th style="width:175px">Fullname</th>
                 <th style="width:200px">Email</th>
-                <th>Address</th>
-                <th style="width:200px">Service</th>
-                <th style="width:300px">Content</th>
-                <th style="width: 100px"></th>
-                <th style="width: 100px" ></th>
+                <th style="width:140px">Phone</th>
+                    
+                <th style="width:175px">Service</th>
+                <th style="width:400px">Content</th>
+                <th style="width: 50px"></th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -127,9 +129,9 @@ require_once('../../data/dbhelp.php');
                 echo "<tr>
                     <td >".++$index."</td>
                     <td>".$item['fullname']."</td>
-                    <td>".$item['birth']."</td> 
-                    <td>".$item['email']."</td>
-                    <td>".$item['address']."</td>
+                    <td>".$item['email']."</td> 
+                    <td>".$item['phone']."</td>
+                    
                     <td>".$item['service']."</td>
                     <td>".$item['content']."</td>
 

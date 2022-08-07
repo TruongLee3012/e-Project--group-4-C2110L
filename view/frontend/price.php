@@ -30,10 +30,10 @@
         <div class="row">
             <nav class="menu-bar">
                 <ul>
-                    <img src="../images/resources/logo-2.png">
+                    <img src="../../images/resources/logo-2.png">
                     <li><a href="../../index.php"><i class="fa fa-home"></i>Home</a></li>
                     <li><a href="about_us.php">About Us</a></li>
-                    <li><a href="doctoc.php"><i class="fa fa-user-doctor"></i>Doctor</a></li>
+                    <li><a href="doctor.php"><i class="fa fa-user-doctor"></i>Doctor</a></li>
                     <li><a href="#"><i class="fa fa-user-check"></i>Service</a>
                         <div class="sub-menu-1">
                             <ul>    

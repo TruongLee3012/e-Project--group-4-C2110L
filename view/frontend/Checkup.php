@@ -1,20 +1,18 @@
 <?php 
 
 require_once('../../data/dbhelp.php');
-$fullname = $age = $email = $address = $service_content = $service = $Creat_at = $Update_at = '';
+$fullname = $age = $email = $address = $service_content = $service = '';
     if (!empty($_POST)) {
-        $fullname = $_POST['fullname'];
-        $birth = $_POST['birth'];
+        $fullname = $_POST['fullname'];       
         $email = $_POST['email'];
-        $address = $_POST['address'];
+        $phone = $_POST['phone'];
+       
         $service = $_POST['service'];
         $content = $_POST['content'];
-        // $Creat_at = $_POST['Creat_at'];
-        // $update_at = $_POST['update_at'];
-
-        $sql = "insert into service_orders(Fullname,Birth,Email,Address,Service,Content) values ('$fullname','$birth','$email','$address','$service','$content')";
+        
+        $sql = "insert into service_orders(Fullname,Email,Phone,Service,Content) values ('$fullname','$email','$phone,'$service','$content')";
         execute($sql);
-        header('Location: product.php');
+        header('Location: price.php');
     }
 
  ?>
@@ -52,7 +50,7 @@ $fullname = $age = $email = $address = $service_content = $service = $Creat_at =
         <div class="row">
             <nav class="menu-bar">
                 <ul>
-                    <img src="../images/resources/logo-2.png">
+                    <img src="../../images/resources/logo-2.png">
                     <li><a href="index.php"><i class="fa fa-home"></i>Home</a></li>
                     <li><a href="about_us.php">About Us</a></li>
                     <li><a href="doctor.php"><i class="fa fa-user-doctor"></i>Doctor</a></li>
@@ -135,17 +133,14 @@ $fullname = $age = $email = $address = $service_content = $service = $Creat_at =
                     </div>
 
                     <div class="form-group">
-                        <label>Birth</label>
-                        <input required="true" type="date" name="birth" class="form-control" >
-                    </div>
-                    <div class="form-group">
                         <label>Email:</label>
-                        <input required="true" type="text" name="email" class="form-control" >
+                        <input required="true" type="email" name="email" class="form-control" >
                     </div>
                     <div class="form-group">
-                        <label>Address:</label>
-                        <input required="true" type="text" name="address" class="form-control">
+                        <label>Phone Number:</label>
+                        <input required="true" type="number" name="phone" class="form-control" >
                     </div>
+                    
                     <div class="form-group">
                         <label>Services:</label>
                         <select class="form-control"  name="service">   

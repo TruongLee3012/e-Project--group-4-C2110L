@@ -1,3 +1,10 @@
+<?php
+require_once('../../data/dbhelp.php');
+
+ $sql="select * from doctor";
+        $list = executeResult($sql);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -66,6 +73,7 @@
 
     <!-- end header -->
     <!-- body -->
+      
     <body class="container-fluid doctor-infor" >
         <div class="row doctor-arena">
             <div class="col-5">
@@ -90,26 +98,6 @@
         <div class="row doctor-arena">
             <div class="col-5">
                 <div class="img-holder">
-                    <img src="../../images/doctor/d.01.jpg" alt="">
-                </div>
-            </div>
-            <div class="col-7">
-                <div class="text-holder">
-                    <span>Prosthodontist</span>
-                    <h3>Dr.Nguyen Tuan Dat</h3>
-                    <p>Dr.Nguyen TUan Dat is a renowned dental surgeon and a certified Dental Implantologist. He is the Director our hospitals.</p>
-                    <h6>Qualification</h6>
-                    <p>BDS , MDS - Plastic And Cosmetic Surgeon,</p>
-                    <ul>
-                        <li><span class="las la-phone"></span>0987654321</li>
-                        <li><span class="las la-envelope"></span>you@example.com</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="row doctor-arena">
-            <div class="col-5">
-                <div class="img-holder">
                     <img src="../../images/doctor/1.png" alt="">
                 </div>
             </div>
@@ -147,10 +135,62 @@
                 </div>
             </div>
         </div>
+        <div class="row doctor-arena">
+            <div class="col-5">
+                <div class="img-holder">
+                    <img src="../../images/doctor/1.png" alt="">
+                </div>
+            </div>
+            <div class="col-7">
+                <div class="text-holder">
+                    <span>Prosthodontist</span>
+                    <h3>Dr.Nguyen Tuan Dat</h3>
+                    <p>Dr.Nguyen TUan Dat is a renowned dental surgeon and a certified Dental Implantologist. He is the Director our hospitals.</p>
+                    <h6>Qualification</h6>
+                    <p>BDS , MDS - Plastic And Cosmetic Surgeon,</p>
+                    <ul>
+                        <li><span class="las la-phone"></span>0987654321</li>
+                        <li><span class="las la-envelope"></span>you@example.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <?php
+                    foreach ($list as $item) {
+              
+            ?>            
+        <div class="row doctor-arena">
+            <div class="col-5" >
+                <div class="img-holder">
+                    
+                       <img src="<?= $item['image'] ?>">
+                
+                </div>
+            </div>
+            <div class="col-7">
+                <div class="text-holder">
+                   
+                        <span><?= $item['position'] ?></span>
+                        <h3><?= $item['fullname'] ?></h3>
+                        <p><?= $item['infomation'] ?></p>
+                        <h6>Qualification</h6>
+                        <p><?= $item['qualification'] ?></p>
+                        <ul>
+                            <li><span class="las la-phone"></span><?= $item['phone'] ?></li>
+                            <li><span class="las la-envelope"></span><?= $item['email'] ?></li>
+                        </ul>
+                        
+                  
+                </div>
+            </div>
+        </div>
+        <?php } ?>
+        
+        
     </body>
     <!-- end body -->
      <!-- footer -->
-     <footer class="container-fluid">
+     <footer class="container">
         <div class="row">
             <div class="col-3">
                 <img src="../../images/resources/logo-2.png" sizes="32x32" class="logo">
