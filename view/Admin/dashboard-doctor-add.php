@@ -21,10 +21,11 @@ if(!empty($_POST)) {
     $image = $_POST['image'];
     // $update_at = $create_at = date('Y-m-d H:i:s');
 
-    $sql = "insert into doctor(Fullname,position, infomation, qualification,Phone,Email,Image) values ('$fullname','$position', '$infomation', '$qualification','$phone','$email','$image' )";
+ $sql = "insert into doctor(Fullname,position, infomation, qualification,Phone,Email,Image) values ('$fullname','$position', '$infomation', '$qualification','$phone','$email','$image' )";
     execute($sql);
     header('Location:dashboard-doctor.php');
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -149,9 +150,7 @@ if(!empty($_POST)) {
                     <div class="form-group">
                     <label>Image: </label>
                     <input required type="text"  name="image" placeholder="Enter Image" class="form-control">
-                    </div>
-                    
-                     <a href="dashboard-doctor.php" ><p style="margin-top: 20px;">Back to doctor list</p></a>
+                    <a href="dashboard-doctor.php" ><p style="margin-top: 20px;">Back to doctor list</p></a>
 
                     <div class="form-group">
                         <button class="btn btn-success">Add</button>

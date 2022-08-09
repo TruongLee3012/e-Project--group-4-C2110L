@@ -114,15 +114,7 @@ if(!empty($_POST)) {
                      <label>Title:</label>
                     <input type="text" style="width: 96%" name="name" placeholder="Enter title" class="form-control">
                     </div>
-                    <div class="form-group">
-                    <label>Thumbnail: </label>
-                    <input type="text" style="width: 96%" name="image" placeholder="Enter thumbnail" class="form-control">
-                    </div>
                     
-                    <div class="form-group">
-                    <label>Content: </label>
-                    <textarea rows="5" style="width: 96%" name="content" class="form-control"></textarea>
-                    </div>
                     
                     
                      <a href="dashboard-blog.php" ><p style="margin-top: 20px;">Back to blog list</p></a>

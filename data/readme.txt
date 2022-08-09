@@ -23,12 +23,12 @@ create table if not exists doctor(
     update_at datetime
 )
 
-create table if not exists service(
+create table if not exists fee(
     id int primary key auto_increment,
-    name varchar(150),
-    image varchar(200),
-    content varchar(200),
+    fullname varchar(150),
+    number int,
     price int,
+    total int,
     update_at datetime,
     create_at datetime
 )

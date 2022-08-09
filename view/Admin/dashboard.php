@@ -7,7 +7,11 @@ if(!isset($_SESSION['user'])) {
     die();
 }
 require_once('../../data/dbhelp.php');
-
+    require_once('../../data/dbhelp.php');
+    $sql_customers = "select count(*) as iscount from customers";
+    $sql_blog = "select count(*) as iscount from blog";
+    $sql_service_order = "select count(*) as iscount from service_orders";   
+    $sql_doctor = "select count(*) as iscount from doctor";             
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -93,7 +97,9 @@ require_once('../../data/dbhelp.php');
             <div class="cards">
                 <div class="card-single">
                     <div>
-                        <h1>23</h1>
+                        <h1><?= execute2($sql_customers)-> iscount ?></h1>
+                       
+
                         <span>Customers</span>
                     </div>
                     <div>
@@ -102,7 +108,7 @@ require_once('../../data/dbhelp.php');
                 </div>
                 <div class="card-single">
                     <div>
-                        <h1>15</h1>
+                        <h1><?= execute2($sql_blog)-> iscount ?></h1>
                         <span>Blogs</span>
                     </div>
                     <div>
@@ -111,11 +117,20 @@ require_once('../../data/dbhelp.php');
                 </div>
                 <div class="card-single">
                     <div>
-                        <h1>23</h1>
+                        <h1><?= execute2($sql_service_order)-> iscount ?></h1>
                         <span>Order</span>
                     </div>
                     <div>
                         <span class="las la-shopping-bag"></span>
+                    </div>
+                </div>
+                 <div class="card-single">
+                    <div>
+                        <h1><?= execute2($sql_doctor)-> iscount ?></h1>
+                        <span>Doctor</span>
+                    </div>
+                    <div>
+                        <span class="las la-user-nurse"></span>
                     </div>
                 </div>
                 <div class="card-single">
@@ -127,6 +142,7 @@ require_once('../../data/dbhelp.php');
                         <span class="las la-hand-holding-usd"></span>
                     </div>
                 </div>
+
             </div>
         </main>
     </div>

@@ -51,7 +51,7 @@ $dataList = executeResult('select * from customers');
                     <span>Dashboard</span></a>
                 </li>
                  <li>
-                    <a href="dashboard-customers.php"><span class="las la-users-cog"></span>
+                    <a href="dashboard-customers.php" class="active"><span class="las la-users-cog"></span>
                     <span>Customer</span></a>
                 </li>
                 <li>
@@ -63,7 +63,7 @@ $dataList = executeResult('select * from customers');
                     <span>Doctor</span></a>
                 </li>
                 <li>
-                    <a href="dashboard-blog.php" class="active" ><span class="las la-clipboard-list"></span>
+                    <a href="dashboard-blog.php"  ><span class="las la-clipboard-list"></span>
                     <span>List Blog</span></a>
                 </li>
                 
@@ -98,7 +98,7 @@ $dataList = executeResult('select * from customers');
 
         <main>
             <div class="container" style="margin-bottom: 20px">
-                <a href="dashboard-blog-add.php"><button class="btn btn-primary">Add</button></a>
+                <a href="dashboard-customers-add.php"><button class="btn btn-primary">Add</button></a>
             </div> 
             <div class="container table-responsive-sm">
                     <table class="table table-bordered">
@@ -121,7 +121,7 @@ $dataList = executeResult('select * from customers');
                 foreach($dataList as $item) {
                     echo "<tr>
                             <td>".++$index."</td>
-                            <td>".$item['fullname']."</td>
+                            <td><a href='fee.php?id=".$item['id']."'>".$item['fullname']."</a></td>
                             <td>".$item['birthday']."</td>
                             <td>".$item['phone']."</td>
                             <td>".$item['address']."</td>
@@ -133,14 +133,14 @@ $dataList = executeResult('select * from customers');
                               
                         </tr>";
                 }
-                
+            
                 ?>
                         </tbody>
                     </table>
                 </div>
             
         </main>
-        
+       
 
 </body>
 <script type="text/javascript">

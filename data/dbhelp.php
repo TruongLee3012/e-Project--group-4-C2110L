@@ -8,6 +8,12 @@ function execute($sql) {
 	mysqli_close($conn);
 }
 
+function execute2($sql) {
+	$conn = mysqli_connect(HOST, USERNAME, PASSWORD, DATABASE);
+	mysqli_set_charset($conn, 'utf8');
+	return $conn->query($sql)->fetch_object();
+}
+
 function executeResult($sql, $isSingle = false) {
 	$conn = mysqli_connect(HOST, USERNAME, PASSWORD, DATABASE);
 	mysqli_set_charset($conn, 'utf8');

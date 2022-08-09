@@ -1,26 +1,13 @@
 <?php
+require_once('../../data/dbhelp.php');
 session_start();
 
 if(!isset($_SESSION['user'])) {
     header('Location: login.php');
     die();
 }
-
 require_once('../../data/dbhelp.php');
-
-
-if(!empty($_POST)) {
-   
-
-    $name = $_POST['name'];
-    $image = $_POST['image'];
-    $content = $_POST['content'];
-    $update_at = $create_at = date('Y-m-d H:i:s');
-
-    $sql = "insert into blog(name, image, content, create_at, update_at) values ('$name', '$image', '$content', '$create_at', '$update_at')";
-    execute($sql);
-    header('Location:dashboard-blog.php');
-}
+$dataList = executeResult('select * from fee');
 ?>
 
 <!DOCTYPE html>
@@ -30,12 +17,13 @@ if(!empty($_POST)) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Page</title>
+    <title>Edit Page</title>
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-    <link rel="stylesheet" href="../../css/dashboard-account.css">
+    <link rel="stylesheet" href="../../css/dashboard.css">
     <link rel="icon" type="image/png" href="../../images/favicon/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="../../images/favicon/favicon-16x16.png" sizes="16x16">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
 
     <script src="https://kit.fontawesome.com/d953ad999c.js"></script>
@@ -62,7 +50,7 @@ if(!empty($_POST)) {
                     <span>Dashboard</span></a>
                 </li>
                  <li>
-                    <a href="dashboard-customers.php"><span class="las la-users-cog"></span>
+                    <a href="dashboard-customers.php" class="active"><span class="las la-users-cog"></span>
                     <span>Customer</span></a>
                 </li>
                 <li>
@@ -74,7 +62,7 @@ if(!empty($_POST)) {
                     <span>Doctor</span></a>
                 </li>
                 <li>
-                    <a href="dashboard-blog.php" class="active" ><span class="las la-clipboard-list"></span>
+                    <a href="dashboard-blog.php" ><span class="las la-clipboard-list"></span>
                     <span>List Blog</span></a>
                 </li>
                 
@@ -108,38 +96,58 @@ if(!empty($_POST)) {
         </header>
 
         <main>
+            <div class="container" style="margin-bottom: 20px">
+                <a href="fee-add.php"><button class="btn btn-primary">Add</button></a>
+            </div> 
             <div class="container table-responsive-sm">
-                <form method="post">
-                    <div class="form-group">
-                     <label>Title:</label>
-                    <input type="text" style="width: 96%" name="name" placeholder="Enter title" class="form-control">
-                    </div>
-                    <div class="form-group">
-                    <label>Thumbnail: </label>
-                    <input type="text" style="width: 96%" name="image" placeholder="Enter thumbnail" class="form-control">
-                    </div>
-                    
-                    <div class="form-group">
-                    <label>Content: </label>
-                    <textarea rows="5" style="width: 96%" name="content" class="form-control"></textarea>
-                    </div>
-                    
-                    
-                     <a href="dashboard-blog.php" ><p style="margin-top: 20px;">Back to blog list</p></a>
-
-                    <div class="form-group">
-                        <button class="btn btn-success">Add</button>
-                    </div>
-
-                </form>
-            </div>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr class="table-primary"  style="text-align: center;">
+                                <th style="width:30px">No</th>
+                                <th style="width:175px">Fullname</th>
+                       
+                                <th style="width: 200px">Number</th>
+                                <th style="width: 150px;">Price</th>
+                                <th style="width: 300px;">Total Price</th>
+                                <th style="width: 50px;"></th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                <?php
+                $index = 0;
+                foreach($dataList as $item) {
+                    echo "<tr>
+                            <td>".++$index."</td>
+                            <td>".$item['fullname']."</td>
+                            <td>".$item['number']."</td>
+                            <td>".$item['price']."</td>
+                            <td>".$item['sum']."</td>
+                         
+                            
+                            <td><a href='fee-edit.php?id=".$item['id']."'><button class='btn btn-warning'>Edit</button></a></td>
+                             <td><a onclick='submit(".$item['id'].")'><button class='btn btn-danger'>Delete</button></a></td>
+                              
+                        </tr>";
+                }
+            
+                ?>
+                        </tbody>
+                    </table>
+                </div>
         </main>
     </div>
-    <style type="text/css">
-    .table-responsive-sm p{
-        padding-bottom: 5px;
-    }
-</style>
-</body>
 
+</body>
+<script type="text/javascript">
+    // Function
+    function submit(id) {
+        let text;
+        if (confirm("Do you want to delete ?") == true) {
+          window.location.replace("fee-delete.php?id="+id);
+        } 
+     
+      }
+                
+</script>
 </html>
