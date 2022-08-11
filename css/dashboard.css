@@ -188,17 +188,17 @@ main {
     border-radius: 2px;
 }
 
-.card-single div:last-child span {
+/*.card-single div:last-child span {
     font-size: 3rem;
     color: var(--main-color);
-}
+}*/
 
 .card-single div:last-child span {
     color: var(--text-gray);
 }
 
 .card-single:last-child {
-    background: var(--main-color);
+    background:  var(--main-color);
 }
 
 .card-single:last-child h1,

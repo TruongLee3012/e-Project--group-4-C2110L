@@ -11,10 +11,10 @@ $dataList = executeResult('select * from blog');
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>Blog</title>
 
     <link rel="stylesheet" href="../../css/blog.css">
 
@@ -25,8 +25,8 @@ $dataList = executeResult('select * from blog');
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-    <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="../../images/favicon/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../images/favicon/favicon-16x16.png" sizes="16x16">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="reset.css">
@@ -41,10 +41,10 @@ $dataList = executeResult('select * from blog');
         <div class="row">
             <nav class="menu-bar">
                 <ul>
-                    <img src="../images/resources/logo-2.png">
+                    <img src="../../images/resources/logo-2.png">
                     <li><a href="../../index.php"><i class="fa fa-home"></i>Home</a></li>
                     <li><a href="about_us.php">About Us</a></li>
-                    <li><a href="#"><i class="fa fa-user-doctor"></i>Doctor</a></li>
+                    <li><a href="doctor.php"><i class="fa fa-user-doctor"></i>Doctor</a></li>
                     <li><a href="#"><i class="fa fa-user-check"></i>Service</a>
                         <div class="sub-menu-1">
                             <ul>
@@ -55,7 +55,7 @@ $dataList = executeResult('select * from blog');
                             </ul>
                         </div>
                     </li>
-                    <li><a href="view/price.php"><i class="las la-file-invoice"></i>Price</a></li>
+                    <li><a href="price.php"><i class="las la-file-invoice"></i>Price</a></li>  
                     <li  class="active"><a href="blog.php"><i class="fa fa-blog"></i>Blog</a></li>
                     <div>
                         <span class="las la-search"></span>
@@ -114,17 +114,18 @@ $dataList = executeResult('select * from blog');
     <footer class="container-fluid">
         <div class="row">
             <div class="col-3">
-                <img src="../images/resources/logo-2.png" sizes="32x32" class="logo">
-                <p>Dento was started in the year 1995 as a small private dental clinic in Binghamton, NY, USA. Looking for affordable dental care?</p>
+                <img src="../../images/resources/logo-2.png" sizes="32x32" class="logo">
+                <p>Dento Viet Nam was started in the year of 2021 as a small private dental clinic in Le Thanh Nghi, Ha Noi, Viet Nam. Looking for affordable dental care?</p>
                 <p class="bottom-text">To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain.</p>
             </div>
             <div class="col-2">
-                <h3>Link</h3>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="view/about_us.html">About Us</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Service</a></li>
-                <li><a href="#">Product</a></li>
+                 <h3>Link</h3>
+                <li><a href="../../index.php">Home</a></li>
+                <li><a href="about_us.php">About Us</a></li>
+                <li><a href="doctor.php">Doctor</a></li>
+                <li><a href="chekup.php">Service</a></li>
+                <li><a href="price.php">Price</a></li>
+                <li><a href="blog.php">Blog</a></li>
             </div>
             <div class="col-4">
                 <h3>Opening Hour</h3>

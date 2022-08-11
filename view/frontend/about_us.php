@@ -31,9 +31,9 @@
             <nav class="menu-bar">
                 <ul>
                     <img src="../../images/resources/logo-2.png">
-                    <li><a href="../index.php"><i class="fa fa-home"></i>Home</a></li>
+                    <li><a href="../../index.php"><i class="fa fa-home"></i>Home</a></li>
                     <li class="active"><a href="about_us.php">About Us</a></li>
-                    <li><a href="#"><i class="fa fa-user-doctor"></i>Doctor</a></li>
+                    <li><a href="doctor.php"><i class="fa fa-user-doctor"></i>Doctor</a></li>
                     <li><a href="#"><i class="fa fa-user-check"></i>Service</a>
                         <div class="sub-menu-1">
                             <ul>
@@ -51,8 +51,8 @@
                             </ul>
                         </div>
                     </li>
-                    <li><a href="product.php"><i class="las la-shopping-cart"></i>Product</a></li>
-                    <li><a href="#"><i class="fa fa-blog"></i>Blog</a></li>
+                    <li><a href="price.php"><i class="las la-shopping-cart"></i>Price</a></li>
+                    <li><a href="blog.php"><i class="fa fa-blog"></i>Blog</a></li>
                     <div>
                         <span class="las la-search"></span>
                         <input type="text" class="search" placeholder="Search">
@@ -299,16 +299,18 @@
         <div class="row">
             <div class="col-3">
                 <img src="../../images/resources/logo-2.png" sizes="32x32" class="logo">
-                <p>Dento was started in the year 1995 as a small private dental clinic in Binghamton, NY, USA. Looking for affordable dental care?</p>
+                <p>Dento Viet Nam was started in the year of 2021 as a small private dental clinic in Le Thanh Nghi, Ha Noi, Viet Nam. Looking for affordable dental care?</p>
                 <p class="bottom-text">To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain.</p>
             </div>
             <div class="col-2">
                 <h3>Link</h3>
-                <li><a href="../index.php">Home</a></li>
+                <li><a href="../../index.php">Home</a></li>
                 <li><a href="about_us.php">About Us</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Service</a></li>
-                <li><a href="product.php">Product</a></li>
+                <li><a href="doctor.php">Doctor</a></li>
+                <li><a href="chekup.php">Service</a></li>
+                <li><a href="price.php">Price</a></li>
+                <li><a href="blog.php">Blog</a></li>
+                               
             </div>
             <div class="col-4">
                 <h3>Opening Hour</h3>

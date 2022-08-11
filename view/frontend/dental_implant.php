@@ -84,7 +84,7 @@ $fullname = $age = $email = $address = $service_content = $service = '';
     <!-- end header -->
     <div class="container service-content">
         <ol class="listup">
-            <li><a href="../index.php">Home</a></li>
+            <li><a href="../../index.php">Home</a></li>
             <li>></li>
             <li>Service</li>
             <li>></li>
@@ -235,16 +235,17 @@ $fullname = $age = $email = $address = $service_content = $service = '';
         <div class="row">
             <div class="col-3">
                 <img src="../../images/resources/logo-2.png" sizes="32x32" class="logo">
-                <p>Dento was started in the year 1995 as a small private dental clinic in Binghamton, NY, USA. Looking for affordable dental care?</p>
+                <p>Dento Viet Nam was started in the year of 2021 as a small private dental clinic in Le Thanh Nghi, Ha Noi, Viet Nam. Looking for affordable dental care?</p>
                 <p class="bottom-text">To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain.</p>
             </div>
             <div class="col-2">
                 <h3>Link</h3>
-                <li><a href="../index.php">Home</a></li>
+                <li><a href="../../index.php">Home</a></li>
                 <li><a href="about_us.php">About Us</a></li>
-                <li><a href="blog.php">Blog</a></li>
-                <li><a href="checkup.php">Service</a></li>
+                <li><a href="doctor.php">Doctor</a></li>
+                <li><a href="chekup.php">Service</a></li>
                 <li><a href="price.php">Price</a></li>
+                <li><a href="blog.php">Blog</a></li>
             </div>
             <div class="col-4">
                 <h3>Opening Hour</h3>

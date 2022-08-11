@@ -133,7 +133,7 @@ require_once('../../data/dbhelp.php');
                         <span class="las la-user-nurse"></span>
                     </div>
                 </div>
-                <div class="card-single">
+                <!-- <div class="card-single">
                     <div>
                         <h1>5400$</h1>
                         <span>Income</span>
@@ -141,7 +141,7 @@ require_once('../../data/dbhelp.php');
                     <div>
                         <span class="las la-hand-holding-usd"></span>
                     </div>
-                </div>
+                </div> -->
 
             </div>
         </main>

@@ -221,6 +221,7 @@ footer .col h3 {
 
 footer a {
     color: #fff;
+
 }
 
 footer ul li {
@@ -302,5 +303,7 @@ hr {
     text-align: center;
 }
 
-
+a{
+       text-decoration: none;
+}
 /* footer */

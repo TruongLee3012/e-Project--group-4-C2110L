@@ -8,10 +8,12 @@
     <title>Home Page</title>
 
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index1.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
-
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/d953ad999c.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -33,9 +35,9 @@
             <nav class="menu-bar">
                 <ul>
                     <img src="images/resources/logo-2.png">
-                    <li class="active"><a href="#"><i class="fa fa-home"></i>Home</a></li>
+                    <li class="active"><a href="index.php"><i class="fa fa-home"></i>Home</a></li>
                     <li><a href="view/frontend/about_us.php">About Us</a></li>
-                    <li><a href="#"><i class="fa fa-user-doctor"></i>Doctor</a></li>
+                    <li><a href="view/frontend/doctor.php"><i class="fa fa-user-doctor"></i>Doctor</a></li>
                     <li><a href="#"><i class="fa fa-user-check"></i>Service</a>
                         <div class="sub-menu-1">
                             <ul>
@@ -113,7 +115,7 @@
     </div>
 
     <div class="about-us container">
-        <div class="row" style="display:flex">
+        <div class="row">
             <div class="col-6">
                 <img src="images/index/aboutus.jpg" width="80%">
             </div>
@@ -130,21 +132,21 @@
                     <h6>Experience Dentist</h6>
                     <div id="bar1" class="barfiller">
                         <span class="tip" style="left: -528px; transition: left 1s ease-in-out 0s;">80%</span>
-                        <span class="fill" data-percentage="80" style="background:rgb(0, 174, 239); width: 432px; transition: left 1s ease-in-out 0s;"></span>
+                        <span class="fill" data-percentage="80" style="background:rgb(0, 174, 239); width: 80%; transition: left 1s ease-in-out 0s;"></span>
                     </div>
                 </div>
                 <div class="single_skill mt-30">
                     <h6>Modern Equipment</h6>
                     <div id="bar1" class="barfiller">
                         <span class="tip" style="left: -528px; transition: left 1s ease-in-out 0s;">65%</span>
-                        <span class="fill" data-percentage="65" style="background:rgb(0, 174, 239); width: 351px; transition: left 1s ease-in-out 0s;"></span>
+                        <span class="fill" data-percentage="65" style="background:rgb(0, 174, 239); width: 65%; transition: left 1s ease-in-out 0s;"></span>
                     </div>
                 </div>
                 <div class="single_skill mt-30">
                     <h6>Friendly Staff</h6>
                     <div id="bar1" class="barfiller">
                         <span class="tip" style="left: -528px; transition: left 1s ease-in-out 0s;">85%</span>
-                        <span class="fill" data-percentage="85" style="background:rgb(0, 174, 239); width: 459px; transition: left 1s ease-in-out 0s;"></span>
+                        <span class="fill" data-percentage="85" style="background:rgb(0, 174, 239); width: 85%; transition: left 1s ease-in-out 0s;"></span>
                     </div>
                 </div>
             </div>
@@ -158,51 +160,51 @@
                 <h2>Our dentist</h2>
             </div>
             <div class="member-items">
-                <figure class="snip0060 yellow"><img src="images/team/1.jpg" alt="sample8" />
+                <figure class="snip0060 blue"><img src="images/team/1.jpg" alt="sample8" />
                     <figcaption>
                         <div><i class="ion-videocamera">Dr. Duc</i></div>
                         <div>
                             <p>Dentist</p>
                             <p>Director</p>
                         </div>
-                        <a href="view/doctor"></a>
+                        <!-- <a href="view/doctor"></a> -->
                     </figcaption>
                 </figure>
-                <figure class="snip0060 yellow"><img src="images/team/1.jpg" alt="sample8" />
+                <figure class="snip0060 blue"><img src="images/team/1.jpg" alt="sample8" />
                     <figcaption>
                         <div><i class="ion-videocamera">Dr. Truong</i></div>
                         <div>
                             <p>Dentist</p>
                             <p>Deputy Director</p>
                         </div>
-                        <a href="#"></a>
+                        <!-- <a href="#"></a> -->
                     </figcaption>
                 </figure>
-                <figure class="snip0060 yellow"><img src="images/team/1.jpg" alt="sample8" />
+                <figure class="snip0060 blue"><img src="images/team/1.jpg" alt="sample8" />
                     <figcaption>
                         <div><i class="ion-videocamera">Dr. Dat</i></div>
                         <div>
                             <p>Orthodontist</p>
                             <p>Manager</p>
                         </div>
-                        <a href="#"></a>
+                       <!--  <a href="#"></a> -->
                     </figcaption>
                 </figure>
-                <figure class="snip0060 yellow"><img src="images/team/1.jpg" alt="sample8" />
+                <figure class="snip0060 blue"><img src="images/team/1.jpg" alt="sample8" />
                     <figcaption>
                         <div><i class="ion-videocamera">Dr. Dung</i></div>
                         <div>
                             <p>Hygienist</p>
                             <p>Professtional</p>
                         </div>
-                        <a href="#"></a>
+                        <!-- <a href="#"></a> -->
                     </figcaption>
                 </figure>
             </div>
         </div>
     </div>
     <!-- Member -->
-    <div class="body-3">
+    <div class="container">
         <div class="desease">
             <div class="desease-header">
                 <div class="desease-header-title">
@@ -304,9 +306,10 @@
                 <h3>Link</h3>
                 <li><a href="index.php">Home</a></li>
                 <li><a href="view/frontend/about_us.php">About Us</a></li>
-                <li><a href="view/frontend/blog.php">Blog</a></li>
-                <li><a href="view/frontend/checkup.php">Service</a></li>
+                <li><a href="view/frontend/doctor.php">Doctor</a></li>
+                <li><a href="view/frontend/ chekup.php">Service</a></li>
                 <li><a href="view/frontend/price.php">Price</a></li>
+                <li><a href="view/frontend/blog.php">Blog</a></li>
             </div>
             <div class="col-4">
                 <h3>Opening Hour</h3>
