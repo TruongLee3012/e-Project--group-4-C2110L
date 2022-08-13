@@ -114,13 +114,16 @@
         </div>
     </div>
 
-    <div class="about-us container">
-        <div class="row">
-            <div class="col-6">
-                <img src="images/index/aboutus.jpg" width="80%">
+    <div class=" container">
+        <div class="about-us">
+            
+        
+        <div class="rows">
+            <div class="column">
+                <img src="images/index/aboutus.jpg" width="90%" height="483px" style="padding-left:10% ;">
             </div>
 
-            <div class="col-6">
+            <div class="column">
                 <div class="aboutus">
                     <div class="section-heading">
                         <h2>About us</h2>
@@ -150,7 +153,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div></div>
     </div>
 
     <!-- Member -->
@@ -208,10 +211,10 @@
         <div class="desease">
             <div class="desease-header">
                 <div class="desease-header-title">
-                    <h2>Hightlight Service</h2>
+                    <h2>Service</h2>
                 </div>
                 <div class="desease-header-text">
-                    <p>Dento Viet Name currently has a variety of dental services to meet the oral health care needs of all customers.</p>
+                    <p>Dento Viet Nam currently has a variety of dental services to meet the oral health care needs of all customers.</p>
                 </div>
             </div>
             <div class="desease-items">
