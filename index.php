@@ -34,7 +34,9 @@
         <div class="row">
             <nav class="menu-bar">
                 <ul>
-                    <img src="images/resources/logo-2.png">
+                    <div>
+                        <h2><span class="las la-tooth"></span><span>Belleville</span></h2>
+                    </div>
                     <li class="active"><a href="index.php"><i class="fa fa-home"></i>Home</a></li>
                     <li><a href="view/frontend/about_us.php">About Us</a></li>
                     <li><a href="view/frontend/doctor.php"><i class="fa fa-user-doctor"></i>Doctor</a></li>
@@ -301,7 +303,9 @@
     <footer class="container-fluid">
         <div class="row">
             <div class="col-3">
-                <img src="images/resources/logo-2.png" sizes="32x32" class="logo">
+                <div>
+                    <h2><span class="las la-tooth"></span><span>Belleville</span></h2>
+                </div>
                 <p>Dento was started in the year 1995 as a small private dental clinic in Binghamton, NY, USA. Looking for affordable dental care?</p>
                 <p class="bottom-text">To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain.</p>
             </div>

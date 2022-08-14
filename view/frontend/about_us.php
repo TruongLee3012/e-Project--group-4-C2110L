@@ -30,7 +30,9 @@
         <div class="row">
             <nav class="menu-bar">
                 <ul>
-                    <img src="../../images/resources/logo-2.png">
+                    <div>
+                        <h2><span class="las la-tooth"></span><span>Belleville</span></h2>
+                    </div>
                     <li><a href="../../index.php"><i class="fa fa-home"></i>Home</a></li>
                     <li class="active"><a href="about_us.php">About Us</a></li>
                     <li><a href="doctor.php"><i class="fa fa-user-doctor"></i>Doctor</a></li>
@@ -95,10 +97,10 @@
             <div class="col" style="min-height: 150px; ">
                 <h3 style="font-size: 28px;">Our Values</h3>
                 <p>We hold a few core values as a company, but most of them boil down to our first one: “Be transparent, honest and conduct your business with integrity.” What does that mean to us?</p>
-                <p><b>Transparency:</b> We believe in transparency both within our team and with our clients. This doesn’t mean sharing private information, but rather creating and living a culture where we talk through thought processes, willingly share
+                <p><b>Transparency:</b> We believe in transparency both within our team and with our clients. This doesn't mean sharing private information, but rather creating and living a culture where we talk through thought processes, willingly share
                     updates and news with each other and clients, and give insight as to where everything stands. </p>
                 <p><b>Honesty:</b> We value input and feedback from our team members and regularly make changes or introduce new products or policies based on this information.</p>
-                <p><b>Integrity:</b> If you make a mistake, bring it up to someone who can help you fix it rather than trying to hide it, thus making it worse. Don’t cut corners to the detriment of others or yourself.</p>
+                <p><b>Integrity:</b> If you make a mistake, bring it up to someone who can help you fix it rather than trying to hide it, thus making it worse. Don't cut corners to the detriment of others or yourself.</p>
             </div>
             <div class="col">
                 <div class="slider-image">
@@ -107,7 +109,7 @@
             </div>
         </div>
     </div>
-    <h2 style="text-align: center;color:    ;">Do you want to join us ?</h2>
+    <h2 style="text-align: center;color: deepskyblue">Do you want to join us ?</h2>
     <div class="container">
 
         <div class="benefit">
@@ -298,7 +300,9 @@
     <footer class="container-fluid">
         <div class="row">
             <div class="col-3">
-                <img src="../../images/resources/logo-2.png" sizes="32x32" class="logo">
+                <div>
+                    <h2><span class="las la-tooth"></span><span>Belleville</span></h2>
+                </div>
                 <p>Dento Viet Nam was started in the year of 2021 as a small private dental clinic in Le Thanh Nghi, Ha Noi, Viet Nam. Looking for affordable dental care?</p>
                 <p class="bottom-text">To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain.</p>
             </div>

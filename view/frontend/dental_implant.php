@@ -50,7 +50,9 @@ $fullname = $age = $email = $address = $service_content = $service = '';
         <div class="row">
             <nav class="menu-bar">
                 <ul>
-                    <img src="../../images/resources/logo-2.png">
+                    <div>
+                        <h2><span class="las la-tooth"></span><span>Belleville</span></h2>
+                    </div>
                     <li><a href="../../index.php"><i class="fa fa-home"></i>Home</a></li>
                     <li><a href="about_us.php">About Us</a></li>
                     <li><a href="doctor.php"><i class="fa fa-user-doctor"></i>Doctor</a></li>
@@ -234,7 +236,9 @@ $fullname = $age = $email = $address = $service_content = $service = '';
     <footer>
         <div class="row">
             <div class="col-3">
-                <img src="../../images/resources/logo-2.png" sizes="32x32" class="logo">
+                <div>
+                    <h2><span class="las la-tooth"></span><span>Belleville</span></h2>
+                </div>
                 <p>Dento Viet Nam was started in the year of 2021 as a small private dental clinic in Le Thanh Nghi, Ha Noi, Viet Nam. Looking for affordable dental care?</p>
                 <p class="bottom-text">To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain.</p>
             </div>
